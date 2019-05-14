@@ -1,0 +1,87 @@
+
+Summary Level: State,
+Data for: Missouri,
+Year Selected: 2011-2015 ACS,
+Income Distribution Overview,Owner,Renter,Total,
+Household Income <= 30% HAMFI,106680.0,208240.0,314920.0,
+Household Income >30% to <=50% HAMFI,148355.0,147155.0,295510.0,
+Household Income >50% to <=80% HAMFI,262090.0,174730.0,436820.0,
+Household Income >80% to <=100% HAMFI,178455.0,77780.0,256235.0,
+Household Income >100% HAMFI,894445.0,166760.0,1061205.0,
+Total,1590020.0,774670.0,2364690.0,
+
+Housing Problems Overview 1,Owner,Renter,Total,
+Household has at least 1 of 4 Housing Problems,337535.0,346390.0,683925.0,
+Household has none of 4 Housing Problems,1241545.0,409660.0,1651205.0,
+Cost burden not available - no other problems,10940.0,18615.0,29555.0,
+Total,1590020.0,774670.0,2364690.0,
+
+Severe Housing Problems Overview 2,Owner,Renter,Total,
+Household has at least 1 of 4 Severe Housing Problems,143825.0,194065.0,337890.0,
+Household has none of 4 Severe Housing Problems,1435255.0,561990.0,1997245.0,
+Cost burden not available - no other problems,10940.0,18615.0,29555.0,
+Total,1590020.0,774670.0,2364690.0,
+
+Housing Cost Burden Overview 3,Owner,Renter,Total,
+Cost Burden <=30%,1260940.0,425825.0,1686765.0,
+Cost Burden >30% to <=50%,196890.0,159320.0,356210.0,
+Cost Burden >50%,120955.0,169495.0,290450.0,
+Cost Burden not available,11240.0,20025.0,31265.0,
+Total,1590020.0,774670.0,2364690.0,
+
+Income by Housing Problems (Owners and Renters),Household has at least 1 of 4 Housing Problems,Household has none of 4 Housing Problems,Cost Burden not available - no other housing problems,Total,
+Household Income <= 30% HAMFI,243045.0,42320.0,29555.0,314920.0,
+Household Income >30% to <=50% HAMFI,186410.0,109100.0,0.0,295510.0,
+Household Income >50% to <=80% HAMFI,150160.0,286655.0,0.0,436820.0,
+Household Income >80% to <=100% HAMFI,44730.0,211505.0,0.0,256235.0,
+Household Income >100% HAMFI,59575.0,1001625.0,0.0,1061205.0,
+Total,683925.0,1651205.0,29555.0,2364690.0,
+
+Income by Housing Problems (Renters only),Household has at least 1 of 4 Housing Problems,Household has none of 4 Housing Problems,Cost Burden not available - no other housing problems,Total,
+Household Income <= 30% HAMFI,162085.0,27540.0,18615.0,208240.0,
+Household Income >30% to <=50% HAMFI,107460.0,39695.0,0.0,147155.0,
+Household Income >50% to <=80% HAMFI,59585.0,115145.0,0.0,174730.0,
+Household Income >80% to <=100% HAMFI,9060.0,68720.0,0.0,77780.0,
+Household Income >100% HAMFI,8200.0,158560.0,0.0,166760.0,
+Total,346390.0,409660.0,18615.0,774670.0,
+
+Income by Housing Problems (Owners only),Household has at least 1 of 4 Housing Problems,Household has none of 4 Housing Problems, Cost Burden not available - no other housing problems,Total,
+Household Income <= 30% HAMFI,80960.0,14780.0,10940.0,106680.0,
+Household Income >30% to <=50% HAMFI,78950.0,69405.0,0.0,148355.0,
+Household Income >50% to <=80% HAMFI,90575.0,171510.0,0.0,262090.0,
+Household Income >80% to <=100% HAMFI,35670.0,142785.0,0.0,178455.0,
+Household Income >100% HAMFI,51375.0,843065.0,0.0,894445.0,
+Total,337535.0,1241545.0,10940.0,1590020.0,
+
+Income by Cost Burden (Owners and Renters),Cost burden > 30% ,Cost burden > 50% ,Total,
+Household Income <= 30% HAMFI,238625.0,188495.0,314920.0,
+Household Income >30% to <=50% HAMFI,181845.0,67325.0,295510.0,
+Household Income >50% to <=80% HAMFI,140470.0,24925.0,436820.0,
+Household Income >80% to <=100% HAMFI,39105.0,4815.0,256235.0,
+Household Income >100% HAMFI,46615.0,4895.0,1061205.0,
+Total,646660.0,290455.0,2364690.0,
+
+Income by Cost Burden (Renters only),Cost burden > 30% ,Cost burden > 50% ,Total
+Household Income <= 30% HAMFI,159075.0,129975.0,208240.0,
+Household Income >30% to <=50% HAMFI,105030.0,32730.0,147155.0,
+Household Income >50% to <=80% HAMFI,54365.0,5220.0,174730.0,
+Household Income >80% to <=100% HAMFI,6535.0,865.0,77780.0,
+Household Income >100% HAMFI,3810.0,705.0,166760.0,
+Total,328815.0,169495.0,774670.0,
+
+Income by Cost Burden (Owners only),Cost burden > 30% ,Cost burden > 50% ,Total,
+Household Income <= 30% HAMFI,79550.0,58520.0,106680.0,
+Household Income >30% to <=50% HAMFI,76810.0,34590.0,148355.0,
+Household Income >50% to <=80% HAMFI,86110.0,19705.0,262090.0,
+Household Income >80% to <=100% HAMFI,32570.0,3950.0,178455.0,
+Household Income >100% HAMFI,42805.0,4190.0,894445.0,
+Total,317845.0,120955.0,1590020.0,
+
+1. The four housing problems are: incomplete kitchen facilities; incomplete  plumbing facilities  more than 1 person per room; and cost burden greater than 30%.
+
+2. The four severe housing problems are: incomplete kitchen facilities; incomplete plumbing facilities; more than 1 person per room; and cost burden greater than 50%.
+
+3. Cost burden is the ratio of housing costs to household income. For renters- housing cost is gross rent (contract rent plus utilities),
+ For owners- housing cost is "select monthly owner costs" which includes mortgage payment; utilities; association fees; insurance; and real estate taxes. 
+
+
