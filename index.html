@@ -8,13 +8,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Downtown Data Discovery</title>
+	<title>Downtown Data Discovery</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
 	
 	<div class="container-fluid">
 		<!-- Content Goes Here -->
+		<div id="plot"></div>
+
+		<script src="plots.js"></script>
+		<!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
+		<!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
+		<!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+		<select id="selDataset" onchange="getData(this.value)">
+			<option value="dataset1">DataSet1</option>
+			<option value="dataset2">DataSet2</option>
+			<option value="dataset3">DataSet3</option>
+		</select>
 	</div>
 
     <!-- Optional JavaScript -->
