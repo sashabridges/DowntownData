@@ -4,6 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -117,5 +118,144 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+=======
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+        <!-- or -->
+        <script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Downtown Data Discovery</title>
+    </head>
+
+    <body>
+<!-- NAVBAR -->
+<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Snake Bait</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav right">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)\</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Data Resources</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Graphs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Income Chart</a>
+                                <a class="dropdown-item" href="#">Crime Chart</a>
+                                <a class="dropdown-item" href="#">Something else</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+           
+                <img src="resources/architecture-blue-skies-blue-sky-349506.jpg" alt="KC">
+    
+                <div id="plot"></div>
+    
+                <script src="plots.js"></script>
+                <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
+                <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
+                <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+    
+            </div>
+    
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+            <script src="https://d3js.org/d3.v5.min.js"></script>
+       
+        <div id="chart">
+               
+
+    <script>
+    let chart = new frappe.Chart( "#chart", { // or DOM element
+    data: {
+      labels: ["12am-3am", "3am-6am", "6am-9am", "9am-12pm",
+      "12pm-3pm", "3pm-6pm", "6pm-9pm", "9pm-12am"],
+
+      datasets: [
+        {
+          name: "Some Data", chartType: 'bar',
+          values: [25, 40, 30, 35, 8, 52, 17, -4]
+        },
+        {
+          name: "Another Set", chartType: 'bar',
+          values: [25, 50, -10, 15, 18, 32, 27, 14]
+        },
+        {
+          name: "Yet Another", chartType: 'line',
+          values: [15, 20, -3, -15, 58, 12, -17, 37]
+        }
+      ],
+
+      yMarkers: [{ label: "Marker", value: 70,
+        options: { labelPos: 'left' }}],
+      yRegions: [{ label: "Region", start: -10, end: 50,
+        options: { labelPos: 'right' }}]
+    },
+
+    title: "My Awesome Chart",
+    type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+    height: 300,
+    colors: ['purple', '#ffa3ef', 'light-blue'],
+
+    tooltipOptions: {
+      formatTooltipX: d => (d + '').toUpperCase(),
+      formatTooltipY: d => d + ' pts',
+    }
+  });
+    
+      
+    
+    
+    </script
+
+
+
+
+
+
+        </div>
+
+          
+    
+    
+
+        
+                
+
+    
+
+
+
+
+
+
+
+      
+
+
+>>>>>>> e76f3dead60efa40eaba036ed0d07c31d69c6dad
     </body>
 </html>
