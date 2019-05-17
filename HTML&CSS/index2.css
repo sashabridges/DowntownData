@@ -1,0 +1,46 @@
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+nav {
+    font-family: 'Righteous', cursive;
+}
+
+.navbar-brand {
+    font-size: 1.70rem;
+}
+.navbar-nav,#button{
+    font-size: 1.25rem;
+}
+
+#title {
+    font-family: 'Abril Fatface', cursive;
+}
+
+#title2 {
+    padding-top: 7%;
+    font-family: 'Abril Fatface', cursive;
+}
+
+#header {
+    background: url("resources/architecture-blue-skies-blue-sky-349506 2.jpg") center center / cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 50vh;
+}
+
+#gallery {
+    margin-top: 2rem;
+}
+
+.card-body {
+    background-color: #EEEEEE;
+}
+
+.btn-outline-success {
+    background-color: white;
+}
+
