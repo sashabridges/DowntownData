@@ -45,7 +45,7 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="income.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item "href="incomeData.html" target="_blank">Income Data</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
                                 <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
@@ -92,7 +92,7 @@
             <div class="container">
                 <div class="col">
                     <h3 class="center-block text-center">
-                        <div class="smallH3-whit">KANSAS CITY PROPERTY CRIME REPORT</div>
+                        <div class="smallH3-whit">2017 KANSAS CITY PROPERTY CRIME REPORT</div>
                     </h3>
 
 
@@ -178,23 +178,43 @@
             </div>
         </div><br><br>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="container">
-                    <div class="chances-victim-wrapper">
-                        <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A VIOLENT CRIME</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 58</h3><br>In Kansas City</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 478</h3><br>In Overland Park</div>
-                        </div>
+        <div class="container">
+            <div class="section">
+                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+                <div id="chart">
+                    <script>
+                        let chart = new frappe.Chart( "#chart", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "National"],
 
-                    </div>
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [17.3, 2.09, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "Crime Rate", value: 30,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "", start: 0, end: 30,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "",
+                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['blue', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' pts',
+                            }
+                        });
+                    </script>
                 </div>
             </div>
+        </div>
         </div><br><br><br>
 
 
@@ -203,7 +223,7 @@
                 <div class="container">
                     <div class="chances-victim-wrapper">
                         <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</div>
+                            <div>CHANCES OF BECOMING A VICTIM OF A "PROPERTY" CRIME</div>
                         </div>
                         <div class="chances-victim col-4 col-lg-3 col-md-6">
                             <div><h3>1 in 22</h3><br>In Kansas City</div>
@@ -229,43 +249,7 @@
         <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
 
-        <div class="container">
-            <div class="section">
-                <h3 class="text-center">PROPERTY CRIME COMPARISON (PER 1,000 RESIDENTS)</h3>
-                <div id="chart">
-                    <script>
-                        let chart = new frappe.Chart( "#chart", { // or DOM element
-                            data: {
-                                labels: ["Kansas City", "Overland Park", "National"],
-
-                                datasets: [
-                                    {
-                                        name: "", chartType: 'bar',
-                                        values: [45.32, 16.99, 24,]
-                                    }
-
-                                ],
-
-                                yMarkers: [{ label: "Marker", value: ;50,
-                                            options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "Region", start: 0, end: 50,
-                                            options: { labelPos: 'right' }}]
-                            },
-
-                            title: "",
-                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                            height: 300,
-                            colors: ['blue', '#ffa3ef', 'light-green'],
-
-                            tooltipOptions: {
-                                formatTooltipX: d => (d + '').toUpperCase(),
-                                formatTooltipY: d => d + ' pts',
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
+        
 
 
 

@@ -45,7 +45,7 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="income.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item "href="incomeData.html" target="_blank">Income Data</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
                                 <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
@@ -171,7 +171,7 @@
         <br><br>
         <div class="container">
             <div class="section">
-                <h3 >Violent Crime Comparison (Per 1,000 residents)</h3>
+                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
                 <div id="chart">
                     <script>
                         let chart = new frappe.Chart( "#chart", { // or DOM element
@@ -210,48 +210,14 @@
         
         <hr>
         
-        <div class="row">
-            <div class="container">
-                <div class="col">
-                    <h3 class="uppercase float-left"><div class="supersmallH3 uppercase">KANSAS CITY PROPERTY CRIMES</div></h3>
-                    <h5 class="uppercase float-right">Population: 488,943</h5>
-                    <div class="table-responsive">
-                        <table class="table table purple">
-                            <thead>
-                                <tr>
-                                    <th>&nbsp;</th>
-                                    <th class="text-center">BURGLARY</th>
-                                    <th class="text-center">THEFT</th>
-                                    <th class="text-center">MOTOR VEHICLE THEFT</th>
-                                </tr>
-
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p>TOTAL</p></td>
-                                    <td class="text-center"><p><strong>4,676</strong></p></td>
-                                    <td class="text-center"><p><strong>13,034</strong></p></td>
-                                    <td class="text-center"><p><strong>4,451</strong></p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Rate per 1,000 residents</p></td>
-                                    <td class="text-center"><p><strong>9.56</strong></p></td>
-                                    <td class="text-center"><p><strong>26.66</strong></p></td>
-                                    <td class="text-center"><p><strong>9.10</strong></p></td>
-                                </tr>
-                            </tbody> 
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div><br><br>
+        
 
         <div class="row">
             <div class="col-12">
                 <div class="container">
                     <div class="chances-victim-wrapper">
                         <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A VIOLENT CRIME</div>
+                            <div>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</div>
                         </div>
                         <div class="chances-victim col-4 col-lg-3 col-md-6">
                             <div><h3>1 in 58</h3><br>In Kansas City</div>
@@ -266,24 +232,7 @@
         </div><br><br><br>
 
 
-        <div class="row">
-            <div class="col-12">
-                <div class="container">
-                    <div class="chances-victim-wrapper">
-                        <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 22</h3><br>In Kansas City</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 59</h3><br>In Overland Park</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
 
 
@@ -297,43 +246,7 @@
         <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
         
 
-        <div class="container">
-            <div class="section">
-                <h3 class="text-center">PROPERTY CRIME COMPARISON (PER 1,000 RESIDENTS)</h3>
-                <div id="chart">
-                    <script>
-                        let chart = new frappe.Chart( "#chart", { // or DOM element
-                            data: {
-                                labels: ["Kansas City", "Overland Park", "National"],
-
-                                datasets: [
-                                    {
-                                        name: "", chartType: 'bar',
-                                        values: [45.32, 16.99, 24,]
-                                    }
-
-                                ],
-
-                                yMarkers: [{ label: "Marker", value: ;50,
-                                            options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "Region", start: 0, end: 50,
-                                            options: { labelPos: 'right' }}]
-                            },
-
-                            title: "",
-                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                            height: 300,
-                            colors: ['blue', '#ffa3ef', 'light-green'],
-
-                            tooltipOptions: {
-                                formatTooltipX: d => (d + '').toUpperCase(),
-                                formatTooltipY: d => d + ' pts',
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
+        
 
 
 
