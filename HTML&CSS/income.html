@@ -78,12 +78,7 @@
         data = {
             labels: ["2014", "2015", "2016", "2017"],
             datasets: [
-                {
-                    name: "Income Data", type: "bar",
-                    values: [44173, 50259, 51235, 51330]
-                },
-                //{
-                //    }
+                   { name: "Kansas City", values: [44173, 50259, 51235, 51330]},
             ]
         }
         
@@ -91,9 +86,9 @@
                                                     // new Chart() in case of ES6 module with above usage
             //title: "Income Chart",
             data: data,
-            type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
+            type: 'line', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
             height: 250,
-            colors: ['#7cd6fd']
+            colors: ['green']
            // colors: ['#7cd6fd', '#743ee2']
         })
                 
