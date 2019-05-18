@@ -27,7 +27,7 @@
     </head>
     <body>
 
-          <!-- Navbar-->
+        <!-- Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
@@ -134,53 +134,14 @@
                         </div>
                     </div>
 
-
-
-
-
                 </div>
             </div>
         </div>
         <br><br>
-        <div class="row">
-            <div class="container">
-                <div class="col">
-                    <h3 class="uppercase float-left"><div class="supersmallH3">Kansas City Property Crimes by Categpries</div></h3>
-                    <h5 class="uppercase float-right">Population: 488,943</h5>
-                    <div class="table-responsive">
-                        <table class="table table purple">
-                            <thead>
-                                <tr>
-                                    <th>&nbsp;</th>
-                                    <th class="text-center">BURGLARY</th>
-                                    <th class="text-center">THEFT</th>
-                                    <th class="text-center">MOTOR VEHICLE THEFT</th>
-                                </tr>
-
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p>TOTAL</p></td>
-                                    <td class="text-center"><p><strong>4,676</strong></p></td>
-                                    <td class="text-center"><p><strong>13,034</strong></p></td>
-                                    <td class="text-center"><p><strong>4,451</strong></p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Rate per 1,000 residents</p></td>
-                                    <td class="text-center"><p><strong>9.56</strong></p></td>
-                                    <td class="text-center"><p><strong>26.66</strong></p></td>
-                                    <td class="text-center"><p><strong>9.10</strong></p></td>
-                                </tr>
-                            </tbody> 
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div><br><br>
 
         <div class="container">
             <div class="section">
-                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+                <h3>Property Crime Perspective (Per 1,000 residents)</h3>
                 <div id="chart">
                     <script>
                         let chart = new frappe.Chart( "#chart", { // or DOM element
@@ -190,14 +151,14 @@
                                 datasets: [
                                     {
                                         name: "", chartType: 'bar',
-                                        values: [17.3, 2.09, 4,]
+                                        values: [45.32, 16.99, 4,]
                                     }
 
                                 ],
 
-                                yMarkers: [{ label: "Crime Rate", value: 30,
+                                yMarkers: [{ label: "Crime Rate", value: 50,
                                             options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "", start: 0, end: 30,
+                                yRegions: [{ label: "", start: 0, end: 50,
                                             options: { labelPos: 'right' }}]
                             },
 
@@ -215,7 +176,45 @@
                 </div>
             </div>
         </div>
-        </div><br><br><br>
+        <hr>
+        <br><br><br>
+        
+        <div class="row">
+            <div class="container">
+
+                <h3 class="uppercase float-left"><div class="supersmallH3">Kansas City Property Crimes by Categpries</div></h3>
+                <h5 class="uppercase float-right">Population: 488,943</h5>
+                <div class="table-responsive">
+                    <table class="table table purple">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th class="text-center">BURGLARY</th>
+                                <th class="text-center">THEFT</th>
+                                <th class="text-center">MOTOR VEHICLE THEFT</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>TOTAL</p></td>
+                                <td class="text-center"><p><strong>4,676</strong></p></td>
+                                <td class="text-center"><p><strong>13,034</strong></p></td>
+                                <td class="text-center"><p><strong>4,451</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Rate per 1,000 residents</p></td>
+                                <td class="text-center"><p><strong>9.56</strong></p></td>
+                                <td class="text-center"><p><strong>26.66</strong></p></td>
+                                <td class="text-center"><p><strong>9.10</strong></p></td>
+                            </tr>
+                        </tbody> 
+                    </table>
+                </div>
+            </div>
+        </div><br><br>
+
+
 
 
         <div class="row">
@@ -249,7 +248,7 @@
         <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
 
-        
+
 
 
 
