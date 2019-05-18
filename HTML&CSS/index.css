@@ -26,6 +26,13 @@ nav {
     font-family: 'Abril Fatface', cursive;
 }
 
+#content-title {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-family: 'Abril Fatface', cursive;
+}
+
+
 #header {
     background: url("resources/architecture-blue-skies-blue-sky-349506 2.jpg") center center / cover no-repeat;
     background-color: rgba(0, 0, 0, 0.4);
