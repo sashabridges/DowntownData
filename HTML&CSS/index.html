@@ -45,9 +45,9 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item " href="incomeData.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item " href="income.html" target="_blank">Income Data</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="NationalKansasCity.html" target="_blank">Natinal vs Kansas City</a>
+                                <a class="dropdown-item" href="NationalKansasCity.html" target="_blank">National vs Kansas City</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Income vs Crime Rate</a>
                             </div>
@@ -105,7 +105,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Income Data</h5>
                                 <p class="card-text">orem ipsum dolor sit amet, consectetur adipisicing elit. Dolor laudantium autem, debitis repellendus pariatur quae inventore.</p>
-                                <a href="#" class="btn btn-outline-success btn-sm">READ MORE</a>
+                                <a href="income.html" class="btn btn-outline-success btn-sm">READ MORE</a>
                                 <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                             </div> 
                         </div>
@@ -117,7 +117,7 @@
                         <div class="card">
                             <img class="card-img-top" src="https://images.unsplash.com/photo-1532077795300-c4b487f601f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
                             <div class="card-body">
-                                <h5 class="card-title">Natinal vs Kansas City</h5>
+                                <h5 class="card-title">National vs Kansas City</h5>
                                 <p class="card-text">orem ipsum dolor sit amet, consectetur adipisicing elit. Dolor laudantium autem, debitis repellendus pariatur quae inventore.</p>
                                 <a href="#" class="btn btn-outline-success btn-sm">READ MORE</a>
                                 <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
@@ -148,45 +148,7 @@
             <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
             <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
-            <div id="chart">
-                <script>
-                    let chart = new frappe.Chart( "#chart", { // or DOM element
-                        data: {
-                            labels: ["12am-3am", "3am-6am", "6am-9am", "9am-12pm",
-                                     "12pm-3pm", "3pm-6pm", "6pm-9pm", "9pm-12am"],
-
-                            datasets: [
-                                {
-                                    name: "Some Data", chartType: 'bar',
-                                    values: [25, 40, 30, 35, 8, 52, 17, -4]
-                                },
-                                {
-                                    name: "Another Set", chartType: 'bar',
-                                    values: [25, 50, -10, 15, 18, 32, 27, 14]
-                                },
-                                {
-                                    name: "Yet Another", chartType: 'line',
-                                    values: [15, 20, -3, -15, 58, 12, -17, 37]
-                                }
-                            ],
-
-                            yMarkers: [{ label: "Marker", value: 70,
-                                        options: { labelPos: 'left' }}],
-                            yRegions: [{ label: "Region", start: -10, end: 50,
-                                        options: { labelPos: 'right' }}]
-                        },
-
-                        title: "My Awesome Chart",
-                        type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                        height: 300,
-                        colors: ['purple', '#ffa3ef', 'light-blue'],
-
-                        tooltipOptions: {
-                            formatTooltipX: d => (d + '').toUpperCase(),
-                            formatTooltipY: d => d + ' pts',
-                        }
-                    });
-                </script>
+              </script>
             </div>
         </div>
 
