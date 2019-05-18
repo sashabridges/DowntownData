@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+        <!-- or 
+<script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>-->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css" type="text/css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+        <title>National vs KC</title>
+    </head>
+    <body>
+
+         <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fal fa-snake"></i>SneakBait<i class="fal fa-snake"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-border-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Graphs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item "href="income.html" target="_blank">Income Data</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
+                                <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Income vs Crime Rate</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2014/yu5f-iqbp" target="_blank">KCPD Crime Data 2014</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2015/kbzx-7ehe" target="_blank">KCPD Crime Data 2015</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2016/wbz8-pdv7" target="_blank">KCPD Crime Data 2016</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2017/98is-shjt" target="_blank">KCPD Crime Data 2017</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2018/dmjw-d28i" target="_blank">KCPD Crime Data 2018</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
+                                <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
+                                
+                                
+                            </div>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br>
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                   <h3 class="center-block text-center">
+                            <div class="smallH3-whit">KANSAS CITY VIOLENT/PROPERTY CRIME REPORT</div>
+                        </h3>
+                    <header>
+                        <h3 class="center-block">
+                            <div class="smallH3-whit">Kansas City Crimes</div>
+                        </h3>
+                    </header>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th class="text-center">Violent</th>
+                                    <th class="text-center">Property</th>
+                                    <th class="text-center">Total</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>Number of Crimes</p></td>
+                                    <td class="text-center"><p><strong>8,375</strong></p></td>
+                                    <td class="text-center"><p><strong>22,161</strong></p></td>
+                                    <td class="text-center"><p><strong>30,536</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Crime Rate<br>(per 1,000 residents)</p></td>
+                                    <td class="text-center"><p><strong>17.13</strong></p></td>
+                                    <td class="text-center"><p><strong>45.32</strong></p></td>
+                                    <td class="text-center"><p><strong>62.45</strong></p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Violent Crimes by Categories</div></h3>
+                    <h5 class="uppercase float-right">Population: 488,943</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th class="text-center">Murder</th>
+                                    <th class="text-center">Rape</th>
+                                    <th class="text-center">Robbery</th>
+                                    <th class="text-center">Assult</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>TOTAL</p></td>
+                                    <td class="text-center"><p><strong>150</strong></p></td>
+                                    <td class="text-center"><p><strong>450</strong></p></td>
+                                    <td class="text-center"><p><strong>1,860</strong></p></td>
+                                    <td class="text-center"><p><strong>5,915</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Rate per 1,000 residents</p></td>
+                                    <td class="text-center"><p><strong>0.31</strong></p></td>
+                                    <td class="text-center"><p><strong>0.92</strong></p></td>
+                                    <td class="text-center"><p><strong>3.80</strong></p></td>
+                                    <td class="text-center"><p><strong>12.10</strong></p></td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="section">
+                <h3 >Violent Crime Comparison (Per 1,000 residents)</h3>
+                <div id="chart">
+                    <script>
+                        let chart = new frappe.Chart( "#chart", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "Natinal"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [17.3, 2.09, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "Marker", value: 30,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "Region", start: 0, end: 30,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "",
+                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['blue', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' pts',
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        
+        <hr>
+        
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 uppercase">KANSAS CITY PROPERTY CRIMES</div></h3>
+                    <h5 class="uppercase float-right">Population: 488,943</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th class="text-center">BURGLARY</th>
+                                    <th class="text-center">THEFT</th>
+                                    <th class="text-center">MOTOR VEHICLE THEFT</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>TOTAL</p></td>
+                                    <td class="text-center"><p><strong>4,676</strong></p></td>
+                                    <td class="text-center"><p><strong>13,034</strong></p></td>
+                                    <td class="text-center"><p><strong>4,451</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Rate per 1,000 residents</p></td>
+                                    <td class="text-center"><p><strong>9.56</strong></p></td>
+                                    <td class="text-center"><p><strong>26.66</strong></p></td>
+                                    <td class="text-center"><p><strong>9.10</strong></p></td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="chances-victim-wrapper">
+                        <div class="chances-victim col-12 col-lg-6 col-md-12">
+                            <div>CHANCES OF BECOMING A VICTIM OF A VIOLENT CRIME</div>
+                        </div>
+                        <div class="chances-victim col-4 col-lg-3 col-md-6">
+                            <div><h3>1 in 58</h3><br>In Kansas City</div>
+                        </div>
+                        <div class="chances-victim col-4 col-lg-3 col-md-6">
+                            <div><h3>1 in 478</h3><br>In Overland Park</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="chances-victim-wrapper">
+                        <div class="chances-victim col-12 col-lg-6 col-md-12">
+                            <div>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</div>
+                        </div>
+                        <div class="chances-victim col-4 col-lg-3 col-md-6">
+                            <div><h3>1 in 22</h3><br>In Kansas City</div>
+                        </div>
+                        <div class="chances-victim col-4 col-lg-3 col-md-6">
+                            <div><h3>1 in 59</h3><br>In Overland Park</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="plot"></div>
+
+        <script src="plots.js"></script>
+        <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
+        <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
+        <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+        
+
+        <div class="container">
+            <div class="section">
+                <h3 class="text-center">PROPERTY CRIME COMPARISON (PER 1,000 RESIDENTS)</h3>
+                <div id="chart">
+                    <script>
+                        let chart = new frappe.Chart( "#chart", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "Natinal"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [45.32, 16.99, 24,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "Marker", value: ;50,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "Region", start: 0, end: 50,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "",
+                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['blue', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' pts',
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+
+    </body>
+</html>
