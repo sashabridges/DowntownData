@@ -130,6 +130,48 @@
             </div>
         </div>
         <br><br>
+        
+        <div class="container">
+            <div class="section">
+                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+                <div id="chart">
+                    <script>
+                        let chart = new frappe.Chart( "#chart", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "National"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [17.3, 2.09, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "Crime Rate", value: 20,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "", start: 0, end: 20,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "",
+                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['blue', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' pts',
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <hr>
+        <br>
+        
         <div class="row">
             <div class="container">
                 <div class="col">
@@ -169,46 +211,7 @@
             </div>
         </div>
         <br><br>
-        <div class="container">
-            <div class="section">
-                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
-                    <script>
-                        let chart = new frappe.Chart( "#chart", { // or DOM element
-                            data: {
-                                labels: ["Kansas City", "Overland Park", "National"],
 
-                                datasets: [
-                                    {
-                                        name: "", chartType: 'bar',
-                                        values: [17.3, 2.09, 4,]
-                                    }
-
-                                ],
-
-                                yMarkers: [{ label: "Crime Rate", value: 30,
-                                            options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "", start: 0, end: 30,
-                                            options: { labelPos: 'right' }}]
-                            },
-
-                            title: "",
-                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                            height: 300,
-                            colors: ['blue', '#ffa3ef', 'light-green'],
-
-                            tooltipOptions: {
-                                formatTooltipX: d => (d + '').toUpperCase(),
-                                formatTooltipY: d => d + ' pts',
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        
-        <hr>
         
         
 
