@@ -23,7 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-        <title>National vs KC</title>
+        <title>Violent Crimes</title>
     </head>
     <body>
 
@@ -37,11 +37,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-border-right">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -71,13 +71,13 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
                                 <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
-                                
-                                
+
+
                             </div>
                         </li>
-                        
 
-                        
+
+
                         <li>
                             <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
                         </li>
@@ -86,12 +86,13 @@
                 </div>
             </div>
         </nav>
+
         <br><br><br><br>
         <div class="row">
             <div class="container">
                 <div class="col">
                    <h3 class="center-block text-center">
-                            <div class="smallH3-whit">KANSAS CITY VIOLENT/PROPERTY CRIME REPORT</div>
+                            <div class="smallH3-whit"><h2>2017 KANSAS CITY VIOLENT CRIME</h2></div>
                         </h3>
                     <header>
                         <h3 class="center-block">
@@ -185,9 +186,9 @@
 
                                 ],
 
-                                yMarkers: [{ label: "Marker", value: 30,
+                                yMarkers: [{ label: "Crime Rate", value: 30,
                                             options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "Region", start: 0, end: 30,
+                                yRegions: [{ label: "", start: 0, end: 30,
                                             options: { labelPos: 'right' }}]
                             },
 
