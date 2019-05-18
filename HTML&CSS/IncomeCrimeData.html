@@ -98,7 +98,10 @@
             <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
             <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
             <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
-<br><br><br><br>
+
+            <div class="center-block text-center">
+                            <div class="smallH3-whit"><h1 id="content-title">INCOME vs CRIME RATE</h1></div>
+                        </div>
             <div id="chart">
                 <script>
                     let chart = new frappe.Chart( "#chart", { // or DOM element
@@ -115,21 +118,22 @@
                                     values: [9598, 8717, 8908, 8926]
                                 },
                                 {
-                                    name: "Household Income", chartType: 'line',
+                                    name: "Household Income", chartType: 'bar',
                                     values: [5907, 6260, 6270, 6340]
                                 }
+                                
                             ],
 
-                            yMarkers: [{ label: "Marker", value: 70,
+                            yMarkers: [{ label: "Marker", value: 10000,
                                         options: { labelPos: 'left' }}],
                             yRegions: [{ label: "Region", start: 0, end: 50,
                                         options: { labelPos: 'right' }}]
                         },
 
-                        title: "My Awesome Chart",
+                        title: "Income vs Crime Rate",
                         type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                        height: 300,
-                        colors: ['#AA1616', '#CFD200', 'black'],
+                        height: 400,
+                        colors: ['#AA1616','#CFD200', 'blue'],
 
                         tooltipOptions: {
                             formatTooltipX: d => (d + '').toUpperCase(),
