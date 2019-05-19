@@ -45,12 +45,12 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="incomeData.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
                                 <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Income vs Crime Rate</a>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crime</a>
                             </div>
                         </li>
 
@@ -92,7 +92,7 @@
             <div class="container">
                 <div class="col">
                     <div class="center-block text-center">
-                        <h1 id="content-title">2017 KANSAS CITY VIOLENT CRIME</h1>
+                        <h1 id="content-title">2017 KANSAS CITY VIOLENT CRIME<hr class="style14"></h1>
                     </div>
 
                     <div class="container">
@@ -105,7 +105,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <thead>
-                                        <tr>
+                                        <tr id="th-color-gr">
                                             <th>&nbsp;</th>
                                             <th class="text-center">Violent</th>
                                             <th class="text-center">Property</th>
@@ -154,13 +154,13 @@
 
                                 ],
 
-                                yMarkers: [{ label: "Crime Rate", value: 50,
+                                yMarkers: [{ label: "", value: 50,
                                             options: { labelPos: 'left' }}],
                                 yRegions: [{ label: "", start: 0, end: 50,
                                             options: { labelPos: 'right' }}]
                             },
 
-                            title: "",
+                            title: "Crime Rate",
                             type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
                             height: 300,
                             colors: ['#CFD200', '#ffa3ef', 'light-green'],
@@ -174,18 +174,19 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <br>
+        <hr class="style14">
         <br><br><br>
-        
+
         <div class="row">
             <div class="container">
 
-                <h3 class="uppercase float-left"><div class="supersmallH3">Kansas City Property Crimes by Categpries</div></h3>
+                <h3 class="uppercase float-left"><div class="supersmallH3">Kansas City Property Crimes by Categories</div></h3>
                 <h5 class="uppercase float-right">Population: 488,943</h5>
                 <div class="table-responsive">
                     <table class="table table purple">
                         <thead>
-                            <tr>
+                            <tr id="th-color-gr">
                                 <th>&nbsp;</th>
                                 <th class="text-center">BURGLARY</th>
                                 <th class="text-center">THEFT</th>
@@ -195,7 +196,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><p>TOTAL</p></td>
+                                <td><p>Total</p></td>
                                 <td class="text-center"><p><strong>4,676</strong></p></td>
                                 <td class="text-center"><p><strong>13,034</strong></p></td>
                                 <td class="text-center"><p><strong>4,451</strong></p></td>
@@ -215,24 +216,23 @@
 
 
 
-        <div class="row">
-            <div class="col-12">
-                <div class="container">
-                    <div class="chances-victim-wrapper">
-                        <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A "PROPERTY" CRIME</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 22</h3><br>In Kansas City</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 59</h3><br>In Overland Park</div>
-                        </div>
 
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+                        <div><h2>CHANCES OF BECOMING A VICTIM OF A "PROPERTY" CRIME</h2></div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <div><h3>1 in 22</h3><br>In Kansas City</div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <h3>1 in 59</h3><br>In Overland Park
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br><br><br>
+
 
 
 

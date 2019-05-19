@@ -23,7 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-        <title>Income vs Crime Data</title>
+        <title>Income vs Crimes</title>
     </head>
     <body>
 
@@ -46,12 +46,12 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="incomeData.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
                                 <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Income vs Crime Rate</a>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crimes</a>
                             </div>
                         </li>
 
@@ -100,7 +100,7 @@
             <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
             <div class="center-block text-center">
-                            <div class="smallH3-whit"><h1 id="content-title">INCOME vs CRIME RATE</h1></div>
+                            <div class="smallH3-whit"><h1 id="content-title">ANNUAL INCOME vs NUMBE OF CRIMES<hr class="style14"></h1></div>
                         </div>
             <div id="chart">
                 <script>
@@ -124,13 +124,13 @@
                                 
                             ],
 
-                            yMarkers: [{ label: "Marker", value: 10000,
+                            yMarkers: [{ label: "", value: 10000,
                                         options: { labelPos: 'left' }}],
-                            yRegions: [{ label: "Region", start: 0, end: 50,
+                            yRegions: [{ label: "", start: 0, end: 10000,
                                         options: { labelPos: 'right' }}]
                         },
 
-                        title: "Income vs Crime Rate",
+                        title: "Number of Crimes",
                         type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
                         height: 400,
                         colors: ['#AA1616','#CFD200', 'blue'],

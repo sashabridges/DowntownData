@@ -27,7 +27,7 @@
     </head>
     <body>
 
-         <!-- Navbar-->
+        <!-- Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
@@ -45,12 +45,12 @@
                                 Graphs
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="incomeData.html" target="_blank">Income Data</a>
+                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
                                 <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Income vs Crime Rate</a>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crime</a>
                             </div>
                         </li>
 
@@ -89,47 +89,46 @@
 
         <div class="row">
             <div class="container">
-                <div class="col">
-                   <div class="center-block text-center">
-                            <div class="smallH3-whit"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIME</h1></div>
-                        </div>
-                    <header>
-                        <h3 class="center-block">
-                            <div class="smallH3-whit">Kansas City Crimes</div>
-                        </h3>
-                    </header>
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>&nbsp;</th>
-                                    <th class="text-center">Violent</th>
-                                    <th class="text-center">Property</th>
-                                    <th class="text-center">Total</th>
-                                </tr>
 
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p>Number of Crimes</p></td>
-                                    <td class="text-center"><p><strong>8,375</strong></p></td>
-                                    <td class="text-center"><p><strong>22,161</strong></p></td>
-                                    <td class="text-center"><p><strong>30,536</strong></p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Crime Rate<br>(per 1,000 residents)</p></td>
-                                    <td class="text-center"><p><strong>17.13</strong></p></td>
-                                    <td class="text-center"><p><strong>45.32</strong></p></td>
-                                    <td class="text-center"><p><strong>62.45</strong></p></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="center-block text-center">
+                    <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIME<hr class="style14"></h1></div>
+                </div>
+                <header>
+                    <h3 class="center-block">
+                        <div class="smallH3-whit">Kansas City Crimes</div>
+                    </h3>
+                </header>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr id="th-color-bl">
+                                <th>&nbsp;</th>
+                                <th class="text-center">Violent</th>
+                                <th class="text-center">Property</th>
+                                <th class="text-center">Total</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>Number of Crimes</p></td>
+                                <td class="text-center"><p><strong>8,375</strong></p></td>
+                                <td class="text-center"><p><strong>22,161</strong></p></td>
+                                <td class="text-center"><p><strong>30,536</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Crime Rate<br>(per 1,000 residents)</p></td>
+                                <td class="text-center"><p><strong>17.13</strong></p></td>
+                                <td class="text-center"><p><strong>45.32</strong></p></td>
+                                <td class="text-center"><p><strong>62.45</strong></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
         <br><br>
-        
+
         <div class="container">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
@@ -147,13 +146,13 @@
 
                                 ],
 
-                                yMarkers: [{ label: "Crime Rate", value: 20,
+                                yMarkers: [{ label: "", value: 20,
                                             options: { labelPos: 'left' }}],
                                 yRegions: [{ label: "", start: 0, end: 20,
                                             options: { labelPos: 'right' }}]
                             },
 
-                            title: "",
+                            title: "Crime Rate",
                             type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
                             height: 400,
                             colors: ['#AA1616', '#ffa3ef', 'light-green'],
@@ -168,9 +167,9 @@
             </div>
         </div>
         <br><br>
-        <hr>
+        <hr class="style14">
         <br>
-        
+
         <div class="row">
             <div class="container">
                 <div class="col">
@@ -179,7 +178,7 @@
                     <div class="table-responsive">
                         <table class="table table purple">
                             <thead>
-                                <tr>
+                                <tr id="th-color-bl">
                                     <th>&nbsp;</th>
                                     <th class="text-center">Murder</th>
                                     <th class="text-center">Rape</th>
@@ -190,7 +189,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p>TOTAL</p></td>
+                                    <td><p>Total</p></td>
                                     <td class="text-center"><p><strong>150</strong></p></td>
                                     <td class="text-center"><p><strong>450</strong></p></td>
                                     <td class="text-center"><p><strong>1,860</strong></p></td>
@@ -211,30 +210,27 @@
         </div>
         <br><br>
 
-        
-        
 
-        <div class="row">
-            <div class="col-12">
-                <div class="container">
-                    <div class="chances-victim-wrapper">
-                        <div class="chances-victim col-12 col-lg-6 col-md-12">
-                            <div>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 58</h3><br>In Kansas City</div>
-                        </div>
-                        <div class="chances-victim col-4 col-lg-3 col-md-6">
-                            <div><h3>1 in 478</h3><br>In Overland Park</div>
-                        </div>
 
+
+
+
+
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+                        <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
+                        <div><h3>1 in 58</h3><br>In Kansas City</div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
+                        <h3>1 in 478</h3><br>In Overland Park
                     </div>
                 </div>
             </div>
         </div><br><br><br>
-
-
-        
 
 
 
@@ -246,9 +242,9 @@
         <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
         <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
         <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
-        
 
-        
+
+
 
 
 
