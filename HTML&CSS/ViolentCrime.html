@@ -91,7 +91,7 @@
             <div class="container">
 
                 <div class="center-block text-center">
-                    <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIME<hr class="style14"></h1></div>
+                    <div class="small"><h1 id="content-title">2017 KANSAS CITY CRIMES<hr class="style14"></h1></div>
                 </div>
                 <header>
                     <h3 class="center-block">
@@ -127,9 +127,89 @@
                 </div>
             </div>
         </div>
-        <br><br>
+        
+        <div class="row">
+            <script>
+                        var svg = d3.select("body").append("svg")
+                        .attr("width", 960)
+                        .attr("height", 500)
+                        .append("g");
+
+                        svg.append("g")
+                            .attr("class", "slices");
+                        svg.append("g")
+                            .attr("class", "labels");
+                        svg.append("g")
+                            .attr("class", "lines");
+                        var width = 500;
+                        var height = 400;
+                        var radius = Math.min(width, height)/2;
+                        var color = d3.scaleOrdinal(d3.schemeAccent);
+                        var data =  [17.13, 45.32, 62.45]
+
+                        //var label = ['a', 'b', 'c'];
+
+                        var pie = d3.pie().sort(null).value(d => d);
+                        var arc = d3.arc().innerRadius(radius*0.8).outerRadius(radius*0.6);
+
+                        var outerArc = d3.arc()
+                        .outerRadius(radius * 0.9)
+                        .innerRadius(radius * 0.9);
+
+                        svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                        svg.selectAll('path')
+                            .data(pie(data))
+                            .enter()
+                            .append('path')
+                            .attr('d', arc)
+                            .attr('fill', (d,i)=> color(i));
+                        svg.append('g').classed('labels',true);
+                        svg.append('g').classed('lines',true);
+
+
+                        var polyline = svg.select('.lines')
+                        .selectAll('polyline')
+                        .data(pie(data))
+                        .enter().append('polyline')
+                        .attr('points', function(d) {
+
+                            var pos = outerArc.centroid(d);
+                            pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                            return [arc.centroid(d), outerArc.centroid(d), pos]
+                        });
+
+                        var label = svg.select('.labels').selectAll('text')
+                        .data(pie(data))
+                        .enter().append('text')
+                        .attr('dy', '.35em')
+                        .html(function(d) {
+                            return d.data;
+                        })
+                        .attr('transform', function(d) {
+                            var pos = outerArc.centroid(d);
+                            pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                            return 'translate(' + pos + ')';
+                        })
+                        .style('text-anchor', function(d) {
+                            return (midAngle(d)) < Math.PI ? 'start' : 'end';
+                        });
+
+                        svg.append('text')
+                            .attr('class', 'toolCircle')
+                            .attr('dy', -15) // hard-coded. can adjust this to adjust text vertical alignment in tooltip
+                            .html('Crime Rate (per 1,000) residents') // add text to the circle.
+                            .style('font-size', '.9em')
+                            .style('text-anchor', 'middle');
+
+                        function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle) / 2; } 
+                    </script> 
+        </div>
 
         <div class="container">
+           <div class="center-block text-center">
+                    <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIMES<hr class="style14"></h1></div>
+               </div>
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
                 <div id="chart">
@@ -159,7 +239,7 @@
 
                             tooltipOptions: {
                                 formatTooltipX: d => (d + '').toUpperCase(),
-                                formatTooltipY: d => d + ' pts',
+                                formatTooltipY: d => d + ' %',
                             }
                         });
                     </script>
@@ -167,13 +247,12 @@
             </div>
         </div>
         <br><br>
-        <hr class="style14">
         <br>
 
         <div class="row">
             <div class="container">
                 <div class="col">
-                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Violent Crimes by Categories</div></h3>
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Violent Crimes by Categories</div></h3>
                     <h5 class="uppercase float-right">Population: 488,943</h5>
                     <div class="table-responsive">
                         <table class="table table purple">
