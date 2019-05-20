@@ -151,12 +151,15 @@
         </section>
         <div class="container">
 
-            <div id="plot"></div>
-
-            <script src="plots.js"></script>
-            <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
-            <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
-            <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+			<div id="pie"></div>
+			<script>
+				var url = "/flask_url";
+				d3.json(url).then(function(data){
+					var layout = {
+						title: "Crime Frequency"}
+					Plotly.plot("pie", data, layout);
+				});
+			</script>
 
             </script>
         </div>
