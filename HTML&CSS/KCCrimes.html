@@ -9,6 +9,49 @@
         <!-- or 
 <script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>-->
 
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+
+        <!-- Color scale -->
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        <!-- Add 2 buttons -->
+        <button onclick="update(data1)">Number of Crimes</button>
+        <button onclick="update(data2)">Crime Rate (per 1,000) residents</button>
+
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+
+
+        <style>
+
+            /* Add shadow effect to chart. */
+            svg {
+                -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+                filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+            }
+
+            /*Styling for the lines connecting the labels to the slices*/
+            polyline{
+                opacity: .3;
+                stroke: black;
+                stroke-width: 2px;
+                fill: none;
+            }
+
+            /* Make the percentage on the text labels bold*/
+            .labelName tspan {
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            .labelName {
+                font-size: 0.9em;
+                font-style: italic;
+            }
+        </style>
+
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -23,7 +66,8 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-        <title>Violent Crimes</title>
+        <title>Kansas City Crimes</title>
+        
     </head>
     <body>
 
@@ -127,122 +171,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="center-block text-center">
-                <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIMES<hr class="style14"></h1></div>
-            </div>
-            <div class="section">
-                <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
-                    <script>
-                        let chart = new frappe.Chart( "#chart", { // or DOM element
-                            data: {
-                                labels: ["Kansas City", "Overland Park", "National"],
-
-                                datasets: [
-                                    {
-                                        name: "", chartType: 'bar',
-                                        values: [17.3, 2.09, 4,]
-                                    }
-
-                                ],
-
-                                yMarkers: [{ label: "", value: 20,
-                                            options: { labelPos: 'left' }}],
-                                yRegions: [{ label: "", start: 0, end: 20,
-                                            options: { labelPos: 'right' }}]
-                            },
-
-                            title: "Crime Rate",
-                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
-                            height: 400,
-                            colors: ['#AA1616', '#ffa3ef', 'light-green'],
-
-                            tooltipOptions: {
-                                formatTooltipX: d => (d + '').toUpperCase(),
-                                formatTooltipY: d => d + ' %',
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <br>
-
-        <div class="row">
-            <div class="container">
-                <div class="col">
-                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Violent Crimes by Categories</div></h3>
-                    <h5 class="uppercase float-right">Population: 488,943</h5>
-                    <div class="table-responsive">
-                        <table class="table table purple">
-                            <thead>
-                                <tr id="th-color-bl">
-                                    <th>&nbsp;</th>
-                                    <th class="text-center">Murder</th>
-                                    <th class="text-center">Rape</th>
-                                    <th class="text-center">Robbery</th>
-                                    <th class="text-center">Assault</th>
-                                </tr>
-
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p>Total</p></td>
-                                    <td class="text-center"><p><strong>150</strong></p></td>
-                                    <td class="text-center"><p><strong>450</strong></p></td>
-                                    <td class="text-center"><p><strong>1,860</strong></p></td>
-                                    <td class="text-center"><p><strong>5,915</strong></p></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Rate per 1,000 residents</p></td>
-                                    <td class="text-center"><p><strong>0.31</strong></p></td>
-                                    <td class="text-center"><p><strong>0.92</strong></p></td>
-                                    <td class="text-center"><p><strong>3.80</strong></p></td>
-                                    <td class="text-center"><p><strong>12.10</strong></p></td>
-                                </tr>
-                            </tbody> 
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-
-
-
-
-
-
-
-        <div class="col-12">
-            <div class="container">
-                <div class="row">
-                    <div class="chances-victim col-12 col-lg-6 col-md-6">
-                        <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
-                    </div>
-                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <div><h3>1 in 58</h3><br>In Kansas City</div>
-                    </div>
-                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <h3>1 in 478</h3><br>In Overland Park
-                    </div>
-                </div>
-            </div>
-        </div><br><br><br>
-
-
-
-
-
-        <div id="plot"></div>
-
-        <script src="plots.js"></script>
-        <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
-        <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
-        <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
 
 
