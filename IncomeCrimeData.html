@@ -102,10 +102,37 @@
             <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
             <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
             <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myDIV");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
+			</script>
+		
+		
+
+		
+
+		
+		
+		
 
             <div class="center-block text-center">
                             <div class="smallH3-whit"><h1 id="content-title">ANNUAL INCOME vs NUMBER OF CRIMES<hr class="style14"></h1></div>
                         </div>
+				<div class="row">
+			<div class="col-*-*"><button onclick="myFunction()">2014</button></div>
+			<div class="col-*-*"><button onclick="myFunction()">2015</button></div>
+			<div class="col-*-*"><button onclick="myFunction()">2016</button></div>
+			<div class="col-*-*"><button onclick="myFunction()">2017</button></div>
+				</div>
+			<div id="myDIV">
+				This is my DIV element.	
             <div id="chart">
                 <script>
                     let chart = new frappe.Chart( "#chart", { // or DOM element
@@ -160,6 +187,7 @@
             </div>
             <p>*Household Income was divided by 10 to allow comparison.</p>
         </div>
+		</div>
 
 
 
