@@ -18,3 +18,5 @@ Using the Graphs dropdown you can access the four previously mentioned pages, bu
 Kansas City Crimes shows two different pie charts and a table indicating how many crimes happened in 2017.
 
 Resources provides all the KCPD DataSets, Income Data, and the IncomeAPI.
+
+To view the website, please go to https://sashabridges.github.io/DowntownData/
