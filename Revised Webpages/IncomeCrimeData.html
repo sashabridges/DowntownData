@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+        <!-- or 
+<script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>-->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css" type="text/css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+        <title>Income vs Crimes</title>
+    </head>
+    <body>
+
+        <!-- Navbar-->
+          <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-border-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Graphs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item "href="KCCrimes.html" target="_blank">Kansas City Crimes</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
+								<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crimes</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Tableau_Embed.html" target="_blank">Heatmap of Domestic Violence Occurrences</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2014/yu5f-iqbp" target="_blank">KCPD Crime Data 2014</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2015/kbzx-7ehe" target="_blank">KCPD Crime Data 2015</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2016/wbz8-pdv7" target="_blank">KCPD Crime Data 2016</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2017/98is-shjt" target="_blank">KCPD Crime Data 2017</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2018/dmjw-d28i" target="_blank">KCPD Crime Data 2018</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
+								<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
+
+
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="container">
+
+            <div id="plot"></div>
+
+            <script src="plots.js"></script>
+            <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
+            <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
+            <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+
+            <div class="center-block text-center">
+                            <div class="smallH3-whit"><h1 id="content-title">ANNUAL INCOME vs NUMBER OF CRIMES<hr class="style14"></h1></div>
+                        </div>
+            <div id="chart">
+                <script>
+                    let chart = new frappe.Chart( "#chart", { // or DOM element
+                        data: {
+                            labels: ["2014", "2015", "2016", "2017"],
+
+                            datasets: [
+                                {
+                                    name: "Household Income", chartType: 'line',
+                                    values: [5907, 6260, 6270, 6340]
+                                },
+								{
+                                    name: "Burgalry - Residence", chartType: 'bar',
+                                    values: [10821, 9084, 9360, 8391]
+                                },
+								{
+                                    name: "Auto Theft", chartType: 'bar',
+                                    values: [8374, 8349, 8456, 9461]
+                                },
+								{
+                                    name: "Non Agg Assault Domestic        -          -     ", chartType: 'bar',
+                                    values: [8680, 9027, 6487, 9029]
+                                },
+								{
+                                    name: "Non Aggravated Assault          -           -     ", chartType: 'bar',
+                                    values: [6331, 6272, 6487, 6547]
+                                },
+								{
+                                    name: "Possession of Drug", chartType: 'bar',
+                                    values: [1960, 1831, 2029, 1667]
+                                }
+                                
+                            ],
+
+                            yMarkers: [{ label: "", value: 10000,
+                                        options: { labelPos: 'left' }}],
+                            yRegions: [{ label: "", start: 0, end: 10000,
+                                        options: { labelPos: 'right' }}]
+                        },
+
+                        title: "Number of Crimes",
+                        type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                        height: 400,
+                        colors: ['#AA1616','#CFD200', 'green'],
+
+                        tooltipOptions: {
+                            formatTooltipX: d => (d + '').toUpperCase(),
+                            formatTooltipY: d => d + '',
+                        }
+                    });
+                </script>
+            </div>
+            <p>*Household Income was divided by 10 to allow comparison.</p>
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+
+    </body>
+</html>

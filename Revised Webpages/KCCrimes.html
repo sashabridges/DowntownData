@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>
+        <!-- or 
+<script src="https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js"></script>-->
+
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+
+        <!-- Color scale -->
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        <!-- Add 2 buttons -->
+        <button onclick="update(data1)">Number of Crimes</button>
+        <button onclick="update(data2)">Crime Rate (per 1,000) residents</button>
+
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+
+
+        <style>
+
+            /* Add shadow effect to chart. */
+            svg {
+                -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+                filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+            }
+
+            /*Styling for the lines connecting the labels to the slices*/
+            polyline{
+                opacity: .3;
+                stroke: black;
+                stroke-width: 2px;
+                fill: none;
+            }
+
+            /* Make the percentage on the text labels bold*/
+            .labelName tspan {
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            .labelName {
+                font-size: 0.9em;
+                font-style: italic;
+            }
+        </style>
+
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css" type="text/css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+        <title>Kansas City Crimes</title>
+
+    </head>
+    <body>
+
+        <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-border-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Graphs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item "href="KCCrimes.html" target="_blank">Kansas City Crimes</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
+								<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crime</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2014/yu5f-iqbp" target="_blank">KCPD Crime Data 2014</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2015/kbzx-7ehe" target="_blank">KCPD Crime Data 2015</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2016/wbz8-pdv7" target="_blank">KCPD Crime Data 2016</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2017/98is-shjt" target="_blank">KCPD Crime Data 2017</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2018/dmjw-d28i" target="_blank">KCPD Crime Data 2018</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
+								<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
+
+
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="container">
+
+                <div class="center-block text-center">
+                    <div class="small"><h1 id="content-title">2017 KANSAS CITY CRIMES<hr class="style14"></h1></div>
+                </div>
+                <header>
+                    <h3 class="center-block">
+                        <div class="smallH3-whit">Kansas City Crimes</div>
+                    </h3>
+                </header>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr id="th-color-bl">
+                                <th>&nbsp;</th>
+                                <th class="text-center">Violent</th>
+                                <th class="text-center">Property</th>
+                                <th class="text-center">Total</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>Number of Crimes</p></td>
+                                <td class="text-center"><p><strong>8,375</strong></p></td>
+                                <td class="text-center"><p><strong>22,161</strong></p></td>
+                                <td class="text-center"><p><strong>30,536</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Crime Rate<br>(per 1,000 residents)</p></td>
+                                <td class="text-center"><p><strong>17.13</strong></p></td>
+                                <td class="text-center"><p><strong>45.32</strong></p></td>
+                                <td class="text-center"><p><strong>62.45</strong></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-4">
+                    <script>
+                        
+                        var svg = d3.select("body").append("svg")
+      .attr("width", 960)
+      .attr("height", 500)
+      .append("g");
+    
+    svg.append("g")
+			.attr("class", "slices");
+    svg.append("g")
+      .attr("class", "labels");
+    svg.append("g")
+      .attr("class", "lines");
+    var width = 500;
+    var height = 400;
+    var radius = Math.min(width, height)/2;
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var data =  [8375, 22161]
+ 
+    //var label = ['a', 'b', 'c'];
+ 
+    var pie = d3.pie().sort(null).value(d => d);
+    var arc = d3.arc().innerRadius(radius*0.8).outerRadius(radius*0.6);
+    
+     var outerArc = d3.arc()
+                .outerRadius(radius * 0.9)
+                .innerRadius(radius * 0.9);
+     
+    svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    
+    svg.selectAll('path')
+    .data(pie(data))
+    .enter()
+    .append('path')
+  	.attr('d', arc)
+    .attr('fill', (d,i)=> color(i));
+    svg.append('g').classed('labels',true);
+    svg.append('g').classed('lines',true);     
+                        
+    var polyline = svg.select('.lines')
+                .selectAll('polyline')
+                .data(pie(data))
+              .enter().append('polyline')
+                .attr('points', function(d) {
+  
+                    // see label transform function for explanations of these three lines.
+                    var pos = outerArc.centroid(d);
+                    pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                    return [arc.centroid(d), outerArc.centroid(d), pos]
+                });              
+                        
+                        
+                var label = svg.select('.labels').selectAll('text')
+                .data(pie(data))
+              .enter().append('text')
+                .attr('dy', '.35em')
+                .html(function(d) {
+                    return d.data;
+                })
+                .attr('transform', function(d) {
+                    var pos = outerArc.centroid(d);
+                    pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                    return 'translate(' + pos + ')';
+                })
+                .style('text-anchor', function(d) {
+                    return (midAngle(d)) < Math.PI ? 'start' : 'end';
+                });
+    
+                svg.append('text')
+                        .attr('class', 'toolCircle')
+                        .attr('dy', -15) // hard-coded. can adjust this to adjust text vertical alignment in tooltip
+                        .html('Number of Crimes') // add text to the circle.
+                        .style('font-size', '.9em')
+                        .style('text-anchor', 'middle');        
+ 
+                        
+                        var svg = d3.select("body").append("svg")
+                        .attr("width", 960)
+                        .attr("height", 500)
+                        .append("g");
+
+                        svg.append("g")
+                            .attr("class", "slices");
+                        svg.append("g")
+                            .attr("class", "labels");
+                        svg.append("g")
+                            .attr("class", "lines");
+                        var width = 500;
+                        var height = 400;
+                        var radius = Math.min(width, height)/2;
+                        var color = d3.scaleOrdinal(d3.schemeAccent);
+                        var data =  [17.13, 45.32]
+                        //var data =  [17.13, 45.32, 62.45]
+
+                        //var label = ['a', 'b', 'c'];
+
+                        var pie = d3.pie().sort(null).value(d => d);
+                        var arc = d3.arc().innerRadius(radius*0.8).outerRadius(radius*0.6);
+
+                        var outerArc = d3.arc()
+                        .outerRadius(radius * 0.9)
+                        .innerRadius(radius * 0.9);
+
+                        svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                        svg.selectAll('path')
+                            .data(pie(data))
+                            .enter()
+                            .append('path')
+                            .attr('d', arc)
+                            .attr('fill', (d,i)=> color(i));
+                        svg.append('g').classed('labels',true);
+                        svg.append('g').classed('lines',true);
+
+
+                        var polyline = svg.select('.lines')
+                        .selectAll('polyline')
+                        .data(pie(data))
+                        .enter().append('polyline')
+                        .attr('points', function(d) {
+
+                            var pos = outerArc.centroid(d);
+                            pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                            return [arc.centroid(d), outerArc.centroid(d), pos]
+                        });
+
+                        var label = svg.select('.labels').selectAll('text')
+                        .data(pie(data))
+                        .enter().append('text')
+                        .attr('dy', '.35em')
+                        .html(function(d) {
+                            return d.data;
+                        })
+                        .attr('transform', function(d) {
+                            var pos = outerArc.centroid(d);
+                            pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                            return 'translate(' + pos + ')';
+                        })
+                        .style('text-anchor', function(d) {
+                            return (midAngle(d)) < Math.PI ? 'start' : 'end';
+                        });
+
+                        svg.append('text')
+                            .attr('class', 'toolCircle')
+                            .attr('dy', -15) // hard-coded. can adjust this to adjust text vertical alignment in tooltip
+                            .html('Crime Rate % (per 1,000) Residents') // add text to the circle.
+                            .style('font-size', '.9em')
+                            .style('text-anchor', 'middle');
+
+                        function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle) / 2; } 
+                    </script> 
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+
+    </body>
+</html>
