@@ -1,8 +1,11 @@
 # DowntownData
-A group project by Charlie Ortman, Steve Ricard, Tad Tatsuya Murao, and Sasha Bridges.
+## Contributors
+Charlie Ortman, Steve Ricard, Tad Tatsuya Murao, Matt Preacher and Sasha Bridges.
 
-This project will utilize HTML, Python, Bootstrap, D3, MySQL, Flask, FontAwesome, and FrappeChartsJS.
+## Languages, software, libraries used
+Python, pandas, numpy, scikit-learn, HTML, Bootstrap, D3, MySQL, Flask, FontAwesome,FrappeChartsJS and Tableau.
 
+## Contents
 The Index page provides quick links to four major pages: Income Data, the Violent Crime Report, the Property Crime Report, and a comparison between Income VS Crime.
 
 The Income Data shows a line chart of the income changes from 2014 through 2018.
