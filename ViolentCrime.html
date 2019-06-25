@@ -106,14 +106,13 @@
                 <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIMES<hr class="style14"></h1></div>
             </div>
 			<div class="row">
-			<div class="col-*-*"><button onclick="myFunction2014()">2014</button></div>
-			<div class="col-*-*"><button onclick="myFunction2015()">2015</button></div>
-			<div class="col-*-*"><button onclick="myFunction2016()">2016</button></div>
-			<div class="col-*-*"><button onclick="myFunction2017()">2017</button></div>
-				</div>
+				<div class="col-*-*"><button onclick="myFunction2014()">2014</button></div>
+				<div class="col-*-*"><button onclick="myFunction2015()">2015</button></div>
+				<div class="col-*-*"><button onclick="myFunction2016()">2016</button></div>
+				<div class="col-*-*"><button onclick="myFunction2017()">2017</button></div>
+			</div>
 	<div id="myDIV2017">
-				This is my DIV element.	
-            <div id="chart">
+            <!--- <div id="chart"> --->
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
                 <div id="chart">
@@ -151,14 +150,13 @@
             </div>
         </div>
 	</div>
+	<div class="container">
 	<div id="myDIV2014" style="display: none;">
-				This is my DIV element.	
-            <div id="chart">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
+                <div id="chart_2014">
                     <script>
-					    let chart_2014 = new frappe.Chart( "#chart", { // or DOM element
+					    let chart_2014 = new frappe.Chart( "#chart_2014", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
 
@@ -189,17 +187,15 @@
 					</script>
                 </div>
             </div>
-        </div>
+    </div>
 	</div>
-					
+	<div class="container">		
 	<div id="myDIV2015" style="display: none;">
-				This is my DIV element.	
-            <div id="chart">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
+                <div id="chart_2015">
                     <script>
-					        let chart_2015 = new frappe.Chart( "#chart", { // or DOM element
+					        let chart_2015 = new frappe.Chart( "#chart_2015", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
 
@@ -232,15 +228,13 @@
             </div>
         </div>
 	</div>
-					
+	<div class="container">
 	<div id="myDIV2016" style="display: none;">
-				This is my DIV element.	
-            <div id="chart">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
+                <div id="chart_2016">
                     <script>
-					 let chart_2016 = new frappe.Chart( "#chart", { // or DOM element
+					 let chart_2016 = new frappe.Chart( "#chart_2016", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
 
@@ -517,13 +511,6 @@
         </div>
 		<br><br><br>
 </div>
-
-        <div id="plot"></div>
-
-        <script src="plots.js"></script>
-        <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
-        <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
-        <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
 
 
 		<!-- FUNCTIONS FOR HIDING VISUALIZATIONS -->

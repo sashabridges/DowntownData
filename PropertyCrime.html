@@ -15,10 +15,6 @@
         <!-- CSS -->
         <link rel="stylesheet" href="index.css" type="text/css">
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -138,10 +134,19 @@
         <div class="container">
            <div class="center-block text-center">
                     <div class="small"><h1 id="content-title">2017 KANSAS CITY PROPERTY CRIMES<hr class="style14"></h1></div>
-               </div>
-            <div class="section">
+            </div>
+			   
+			<div class="row">
+				<div class="col-*-*"><button onclick="myFunction2014()">2014</button></div>
+				<div class="col-*-*"><button onclick="myFunction2015()">2015</button></div>
+				<div class="col-*-*"><button onclick="myFunction2016()">2016</button></div>
+				<div class="col-*-*"><button onclick="myFunction2017()">2017</button></div>
+		</div>
+	<!---- 2017 ---->
+    <div id="myDIV2017">
+				<div class="section">
                 <h3>Property Crime Perspective (Per 1,000 residents)</h3>
-                <div id="chart">
+				<div id="chart">
                     <script>
                         let chart = new frappe.Chart( "#chart", { // or DOM element
                             data: {
@@ -162,7 +167,7 @@
                             },
 
                             title: "Crime Rate",
-                            type: 'axis-mixed', // or 'bar', 'line', 'pie', 'percentage'
+                            type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
                             height: 300,
                             colors: ['#CFD200', '#ffa3ef', 'light-green'],
 
@@ -172,55 +177,173 @@
                             }
                         });
                     </script>
+					</div>
                 </div>
             </div>
+			
+	<!----- 2014 ---->
+    <div id="myDIV2014" style="display: none;">
+		<div class="section">
+				    <h3>Property Crime Perspective (Per 1,000 residents)</h3>
+					<div id="chart_2014">
+                    <script>
+                        let chart_2014 = new frappe.Chart( "#chart_2014", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "National"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [45.32, 16.99, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "", value: 50,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "", start: 0, end: 50,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "Crime Rate",
+                            type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['#CFD200', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' %',
+                            }
+                        });
+                    </script>
+					</div>
         </div>
-        <br>
-        <br><br><br>
+    </div>
+			
+	<!---- 2015 ---->
+    <div id="myDIV2015" style="display: none;">
+			<div class="section">
+                <h3>Property Crime Perspective (Per 1,000 residents)</h3>
+				<div id="chart_2015">
+                    <script>
+                        let chart_2015 = new frappe.Chart( "#chart_2015", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "National"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [45.32, 16.99, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "", value: 50,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "", start: 0, end: 50,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "Crime Rate",
+                            type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['#CFD200', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' %',
+                            }
+                        });
+                    </script>
+					</div>
+            </div>
+		</div>
+			
+		<!---- 2016 ---->
+     <div id="myDIV2016" style="display: none;">
+			<div class="section">
+				<h3>Property Crime Perspective (Per 1,000 residents)</h3>
+				<div id="chart_2016">
+                    <script>
+                        let chart_2016 = new frappe.Chart( "#chart_2016", { // or DOM element
+                            data: {
+                                labels: ["Kansas City", "Overland Park", "National"],
+
+                                datasets: [
+                                    {
+                                        name: "", chartType: 'bar',
+                                        values: [45.32, 16.99, 4,]
+                                    }
+
+                                ],
+
+                                yMarkers: [{ label: "", value: 50,
+                                            options: { labelPos: 'left' }}],
+                                yRegions: [{ label: "", start: 0, end: 50,
+                                            options: { labelPos: 'right' }}]
+                            },
+
+                            title: "Crime Rate",
+                            type: 'bar', // or 'bar', 'line', 'pie', 'percentage'
+                            height: 300,
+                            colors: ['#CFD200', '#ffa3ef', 'light-green'],
+
+                            tooltipOptions: {
+                                formatTooltipX: d => (d + '').toUpperCase(),
+                                formatTooltipY: d => d + ' %',
+                            }
+                        });
+                    </script>
+				</div>
+            </div>
+        </div>
+			
+	</div>
+        
+			<!--- 2017 --->
+	<div id="my_2017">
 
         <div class="row">
             <div class="container">
-
-                <h3 class="uppercase float-left"><div class="supersmallH3">Kansas City Major Property Crimes by Categories</div></h3>
-                <h5 class="uppercase float-right">Population: 488,943</h5>
-                <div class="table-responsive">
-                    <table class="table table purple">
-                        <thead>
-                            <tr id="th-color-gr">
-                                <th>&nbsp;</th>
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Property Crimes by Categories</div></h3>
+                    <h5 class="uppercase float-right">Population: 488,943</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr id="th-color-bl">
+                                    <th>&nbsp;</th>
                                 <th class="text-center">BURGLARY</th>
                                 <th class="text-center">THEFT</th>
                                 <th class="text-center">MOTOR VEHICLE THEFT</th>
-                            </tr>
+                                </tr>
 
-                        </thead>
-                        <tbody>
-                            <tr>
+                            </thead>
+                            <tbody>
+                                <tr>
                                 <td><p>Total</p></td>
-                                <td class="text-center"><p><strong>4,676</strong></p></td>
-                                <td class="text-center"><p><strong>13,034</strong></p></td>
-                                <td class="text-center"><p><strong>4,451</strong></p></td>
-                            </tr>
-                            <tr>
+                                <td class="text-center"><p><strong>10,732</strong></p></td>
+                                <td class="text-center"><p><strong>30,542</strong></p></td>
+                                <td class="text-center"><p><strong>1,0405</strong></p></td>
+                                </tr>
+                                <tr>
                                 <td><p>Rate per 1,000 residents</p></td>
-                                <td class="text-center"><p><strong>9.56</strong></p></td>
-                                <td class="text-center"><p><strong>26.66</strong></p></td>
-                                <td class="text-center"><p><strong>9.10</strong></p></td>
-                            </tr>
-                        </tbody> 
-                    </table>
+                                <td class="text-center"><p><strong>21.94</strong></p></td>
+                                <td class="text-center"><p><strong>62.46</strong></p></td>
+                                <td class="text-center"><p><strong>21.28</strong></p></td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div><br><br>
-
-
-
-
+        </div>
+        <br><br>
 
         <div class="col-12">
             <div class="container">
                 <div class="row">
-                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+					<div class="chances-victim col-12 col-lg-6 col-md-6">
                         <div><h2>CHANCES OF BECOMING A VICTIM OF A "PROPERTY" CRIME</h2></div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
@@ -231,25 +354,278 @@
                     </div>
                 </div>
             </div>
-        </div><br><br><br>
+        </div>
+		<br><br><br>
+</div>
+			<!--- 2014 --->
+    <div id="my_2014" style="display: none;">
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Property Crimes by Categories</div></h3>
+                    <h5 class="uppercase float-right">Population: 470,941</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr id="th-color-bl">
+                                <th>&nbsp;</th>
+                                <th class="text-center">BURGLARY</th>
+                                <th class="text-center">THEFT</th>
+                                <th class="text-center">MOTOR VEHICLE THEFT</th>
+                                </tr>
 
+                            </thead>
+                            <tbody>
+                             <tr>
+                                <td><p>Total</p></td>
+                                <td class="text-center"><p><strong>12,904</strong></p></td>
+                                <td class="text-center"><p><strong>30,074</strong></p></td>
+                                <td class="text-center"><p><strong>8,374</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Rate per 1,000 residents</p></td>
+                                <td class="text-center"><p><strong>27.40</strong></p></td>
+                                <td class="text-center"><p><strong>63.85</strong></p></td>
+                                <td class="text-center"><p><strong>17.78</strong></p></td>
+                            </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
 
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+                        <div><h2>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</h2></div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <div><h3>1 in 22</h3><br>In Kansas City</div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <h3>1 in 59</h3><br>In Overland Park
+                    </div>
+                </div>
+            </div>
+        </div>
+		<br><br><br>
+</div>
+			<!--- 2015 --->
+            
+	<div id="my_2015" style="display: none;">
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Property Crimes by Categories</div></h3>
+                    <h5 class="uppercase float-right">Population: 475,310</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr id="th-color-bl">
+                                <th>&nbsp;</th>
+                                <th class="text-center">BURGLARY</th>
+                                <th class="text-center">THEFT</th>
+                                <th class="text-center">MOTOR VEHICLE THEFT</th>
+                                </tr>
 
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><p>Total</p></td>
+                                <td class="text-center"><p><strong>11,078</strong></p></td>
+                                <td class="text-center"><p><strong>27,559</strong></p></td>
+                                <td class="text-center"><p><strong>8,349</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Rate per 1,000 residents</p></td>
+                                <td class="text-center"><p><strong>23.30</strong></p></td>
+                                <td class="text-center"><p><strong>57.98</strong></p></td>
+                                <td class="text-center"><p><strong>17.56</strong></p></td>
+                            </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
 
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+                        <div><h2>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</h2></div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <div><h3>1 in 22</h3><br>In Kansas City</div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <h3>1 in 59</h3><br>In Overland Park
+                    </div>
+                </div>
+            </div>
+        </div>
+		<br><br><br>
+</div>
+			<!--- 2016 --->
+	<div id="my_2016" style="display: none;">
 
+        <div class="row">
+            <div class="container">
+                <div class="col">
+                    <h3 class="uppercase float-left"><div class="supersmallH3 capitalize">Kansas City Major Property Crimes by Categories</div></h3>
+                    <h5 class="uppercase float-right">Population: 482,118</h5>
+                    <div class="table-responsive">
+                        <table class="table table purple">
+                            <thead>
+                                <tr id="th-color-bl">
+                                <th>&nbsp;</th>
+                                <th class="text-center">BURGLARY</th>
+                                <th class="text-center">THEFT</th>
+                                <th class="text-center">MOTOR VEHICLE THEFT</th>
+                                </tr>
 
-        <div id="plot"></div>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><p>Total</p></td>
+                                <td class="text-center"><p><strong>11,245</strong></p></td>
+                                <td class="text-center"><p><strong>28,169</strong></p></td>
+                                <td class="text-center"><p><strong>8,456</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Rate per 1,000 residents</p></td>
+                                <td class="text-center"><p><strong>23.32</strong></p></td>
+                                <td class="text-center"><p><strong>58.42</strong></p></td>
+                                <td class="text-center"><p><strong>17.54</strong></p></td>
+                            </tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
 
-        <script src="plots.js"></script>
-        <!-- See Week 15, Folder 2, 01-Ins_Dropdown_Events -->
-        <!-- Potentially we can have a dropdown menu that allows the user to select what they want to look at.-->
-        <!-- Changing the dataset can allow us to change the Flask route the user is looking at. -->
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="chances-victim col-12 col-lg-6 col-md-6">
+                        <div><h2>CHANCES OF BECOMING A VICTIM OF A PROPERTY CRIME</h2></div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <div><h3>1 in 22</h3><br>In Kansas City</div>
+                    </div>
+                    <div class="chances-victim-cont col-6 col-lg-3 col-md-3">
+                        <h3>1 in 59</h3><br>In Overland Park
+                    </div>
+                </div>
+            </div>
+        </div>
+		<br><br><br>
+</div>
 
-
-
-
-
-
+		
+		<br><br><br>
+		
+		<!-- FUNCTIONS FOR HIDING VISUALIZATIONS -->
+			<script>
+			function myFunction2014() {
+				var x = document.getElementById("myDIV2014");
+				var y = document.getElementById("myDIV2015");
+				var z = document.getElementById("myDIV2016");
+				var w = document.getElementById("myDIV2017");
+				var x2 = document.getElementById("my_2014");
+				var y2 = document.getElementById("my_2015");
+				var z2 = document.getElementById("my_2016");
+				var w2 = document.getElementById("my_2017");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					x2.style.display = "block";
+					y.style.display = "none";
+					y2.style.display = "none";
+					z.style.display = "none";
+					z2.style.display = "none";
+					w.style.display = "none";
+					w2.style.display = "none";
+				} else {
+					x.style.display = "none";
+					x2.style.display = "none";
+				}
+			}
+			function myFunction2015() {
+				var x = document.getElementById("myDIV2015");
+				var y = document.getElementById("myDIV2014");
+				var z = document.getElementById("myDIV2016");
+				var w = document.getElementById("myDIV2017");
+				var x2 = document.getElementById("my_2015");
+				var y2 = document.getElementById("my_2014");
+				var z2 = document.getElementById("my_2016");
+				var w2 = document.getElementById("my_2017");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					x2.style.display = "block";
+					y.style.display = "none";
+					y2.style.display = "none";
+					z.style.display = "none";
+					z2.style.display = "none";
+					w.style.display = "none";
+					w2.style.display = "none";
+				} else {
+					x.style.display = "none";
+					x2.style.display = "none";
+				}
+			}
+			function myFunction2016() {
+				var x = document.getElementById("myDIV2016");
+				var y = document.getElementById("myDIV2014");
+				var z = document.getElementById("myDIV2015");
+				var w = document.getElementById("myDIV2017");
+				var x2 = document.getElementById("my_2016");
+				var y2 = document.getElementById("my_2014");
+				var z2 = document.getElementById("my_2015");
+				var w2 = document.getElementById("my_2017");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					x2.style.display = "block";
+					y.style.display = "none";
+					y2.style.display = "none";
+					z.style.display = "none";
+					z2.style.display = "none";
+					w.style.display = "none";
+					w2.style.display = "none";
+				} else {
+					x.style.display = "none";
+					x2.style.display = "none";
+				}
+			}
+			function myFunction2017() {
+				var x = document.getElementById("myDIV2017");
+				var y = document.getElementById("myDIV2014");
+				var z = document.getElementById("myDIV2016");
+				var w = document.getElementById("myDIV2015");
+				var x2 = document.getElementById("my_2017");
+				var y2 = document.getElementById("my_2014");
+				var z2 = document.getElementById("my_2016");
+				var w2 = document.getElementById("my_2015");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					x2.style.display = "block";
+					y.style.display = "none";
+					y2.style.display = "none";
+					z.style.display = "none";
+					z2.style.display = "none";
+					w.style.display = "none";
+					w2.style.display = "none";
+				} else {
+					x.style.display = "none";
+					x2.style.display = "none";
+				}
+			}
+			</script>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
