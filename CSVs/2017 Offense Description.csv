@@ -1,0 +1,102 @@
+﻿Offense,Description,Type
+101,Homicide/Non Neglige,Violent 
+121,Justifiable Homicide,Violent 
+201,Rape,Violent 
+210,Forcible Sodomy,Violent 
+220,Sexual Assault with,Violent 
+230,Forcible Fondling,Violent 
+301,Strong Arm Robbery,Violent 
+302,Armed Robbery,Violent 
+401,Aggravated Assault,Violent 
+402,Agg Assault - Drive-,Violent 
+403,Agg Assault - Domest,Violent 
+501,Burglary - Residence,Property
+502,Burglary - Non Resid,Property
+610,Stealing Pickpocket,Property
+620,Stealing Purse Snatc,Property
+630,Stealing Shoplifting,Property
+640,Stealing From Auto,Property
+650,Stealing Auto Parts/,Property
+660,Stealing Bicycles,Property
+670,Stealing from Buildi,Property
+680,Stealing Coin Operat,Property
+690,Stealing All Other,Property
+702,Auto Theft,Property
+799,Auto Theft Outside S,Property
+801,Non Aggravated Assau,Non-Violent 
+802,Non Agg Assault Dome,Non-Violent 
+820,Stalking,Non-Violent 
+831,Intimidation,Non-Violent 
+840,Resisting an Officer,Non-Violent 
+842,Resisting an Officer,Non-Violent 
+901,Arson,Property
+902,Arson with Fire Bomb,Property
+1001,Forgery,Property
+1002,Forged Checks,Property
+1050,Counterfeiting,Property
+1120,Fraud/Confidence Gam,Property
+1122,Credit/Debit/ATM Car,Property
+1170,Failure to Return,Non-Violent 
+1188,Wire Fraud,Property
+1189,Welfare Fraud,Property
+1197,Impersonation - NOT,Non-Violent 
+1198,Identity Theft,Non-Violent 
+1199,Hacking/Computer Inv,Non-Violent 
+1201,Embezzlement,Property
+1352,Stolen Property OFFE,Property
+1401,Property Damage,Property
+1546,Weapons Law Violatio,Non-Violent 
+1648,Pornography,Non-Violent 
+1650,Promoting Prostituti,Non-Violent 
+1651,Prostitution/Solicit,Non-Violent 
+1652,Prostitution/Patroni,Non-Violent 
+1653,Human Trafficking/Co,Non-Violent 
+1701,Sex Offense -others,Violent 
+1702,Statutory Rape,Violent 
+1740,Sex Off Follow/Entic,Non-Violent 
+1741,Sex Off Indecent Con,Non-Violent 
+1742,Sex Off Misconduct,Non-Violent 
+1750,Sex Off Fondle - mol,Non-Violent 
+1760,Sex Off Incest,Non-Violent 
+1770,Sex Off Indecent Exp,Non-Violent 
+1849,Possession/Sale/Dist,Non-Violent 
+1850,Possession of Drug E,Non-Violent 
+2001,Family Offense,Non-Violent 
+2031,Family Disturbance,Non-Violent 
+2040,Violation Full Order,Non-Violent 
+2041,Violation Ex Parte O,Non-Violent 
+2054,Interference with Cu,Non-Violent 
+2100,Driving Under Influe,Non-Violent 
+2201,Liquor Law Violaton,Non-Violent 
+2402,Disorderly Conduct,Non-Violent 
+2403,Drunkenness,Non-Violent 
+2501,Vagrancy,Non-Violent 
+2530,Loitering,Non-Violent 
+2601,Misc Violation,Non-Violent 
+2602,Bomb Threat/Intimida,Non-Violent 
+2603,False ID,Non-Violent 
+2604,False Information to,Non-Violent 
+2655,Trespassing,Non-Violent 
+2661,Kidnapping/Abduction,Non-Violent 
+2662,Extortion/Blackmail,Non-Violent 
+2663,Passing Bad Checks,Non-Violent 
+2664,Curfew,Non-Violent 
+2665,Peeping Tom,Non-Violent 
+2693,Hit and Run of a Per,Non-Violent 
+2954,Missing/Runaway Juve,Non-Violent 
+3010,Casualty (includes a,Non-Violent 
+3020,Dead Body,Non-Violent 
+3036,Animal Cruelty,Non-Violent 
+3060,Suicide By Cutting,Non-Violent 
+3063,Suicide By Hanging,Non-Violent 
+3066,Suicide By Shooting,Non-Violent 
+3067,Suicide By Sleeping,Non-Violent 
+3069,Suicide by Other Mea,Non-Violent 
+3070,Attempt Suicide by C,Non-Violent 
+3072,Attempt Suicide by G,Non-Violent 
+3073,Attempt Suicide by H,Non-Violent 
+3074,Attempt Suicide by J,Non-Violent 
+3075,Attempt Suicide by P,Non-Violent 
+3076,Attempt Suicide by S,Non-Violent 
+3077,Attempt Suicide by S,Non-Violent 
+3079,Attempt Suicide by O,Non-Violent 
