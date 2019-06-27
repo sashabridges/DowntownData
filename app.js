@@ -1,3 +1,4 @@
+
 // Dataset we will be using to set the height of our rectangles
 var kcThisYear2017 = [462.6, 122.3, 206.4];
 
@@ -221,3 +222,7 @@ svg.selectAll("rect")
   .attr("x", function(data, index) {
     return index * 60;
   });
+  
+  
+
+
