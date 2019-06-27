@@ -14,6 +14,9 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="index.css" type="text/css">
+		
+		<!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -27,7 +30,7 @@
     </head>
     <body>
 
-        <!-- Navbar-->
+                <!-- Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
@@ -56,6 +59,8 @@
                                 <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crime</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="Tableau_Embed.html" target="_blank">Heatmap of Domestic Violence Occurrences</a>
+								<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Tableau_Embed_2.html" target="_blank">Heatmap of Gun Violence Occurrences</a>
                             </div>
                         </li>
 
@@ -77,8 +82,10 @@
                                 <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
 								<div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
-
-
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="http://www.city-data.com/crime/crime-Overland-Park-Kansas.html" target="_blank">Overland Park Crime Data</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="http://www.city-data.com/crime/crime-Kansas-City-Missouri.html" target="_blank">Kansas City Crime Data</a>
                             </div>
                         </li>
 
@@ -105,7 +112,7 @@
 
         <div class="container">
             <div class="center-block text-center">
-                <div class="small"><h1 id="content-title">2017 KANSAS CITY VIOLENT CRIMES<hr class="style14"></h1></div>
+                <div class="small"><h1 id="content-title">2014 KANSAS CITY VIOLENT CRIMES<hr class="style14"></h1></div>
             </div>
 			<div class="row">
 				<div class="col-*-*"><button onclick="myFunction2014()">2014</button></div>
@@ -113,12 +120,13 @@
 				<div class="col-*-*"><button onclick="myFunction2016()">2016</button></div>
 				<div class="col-*-*"><button onclick="myFunction2017()">2017</button></div>
 			</div>
-	<div id="myDIV2017">
+	<div id="myDIV2017"  style="display: none;">
             <!--- <div id="chart"> --->
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+				<div id="svg-areav2017"></div>
                 <div id="chart">
-                    <script>
+                 <!--   <script>
                         let chart = new frappe.Chart( "#chart", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
@@ -147,17 +155,18 @@
                                 formatTooltipY: d => d + ' %',
                             }
                         });
-                    </script>
+                    </script> -->
                 </div>
             </div>
         </div>
 	</div>
 	<div class="container">
-	<div id="myDIV2014" style="display: none;">
+	<div id="myDIV2014">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+				<div id="svg-areav2014"></div>
                 <div id="chart_2014">
-                    <script>
+                <!--    <script>
 					    let chart_2014 = new frappe.Chart( "#chart_2014", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
@@ -186,7 +195,7 @@
                                 formatTooltipY: d => d + ' %',
                             }
                         });
-					</script>
+					</script> -->
                 </div>
             </div>
     </div>
@@ -195,8 +204,9 @@
 	<div id="myDIV2015" style="display: none;">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+				<div id="svg-areav2015"></div>
                 <div id="chart_2015">
-                    <script>
+                <!--    <script>
 					        let chart_2015 = new frappe.Chart( "#chart_2015", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
@@ -225,7 +235,7 @@
                                 formatTooltipY: d => d + ' %',
                             }
                         });
-					</script>
+					</script> -->
                 </div>
             </div>
         </div>
@@ -234,8 +244,9 @@
 	<div id="myDIV2016" style="display: none;">
             <div class="section">
                 <h3 >Violent Crime Perspective (Per 1,000 residents)</h3>
+				<div id="svg-areav2016"></div>
                 <div id="chart_2016">
-                    <script>
+                <!--    <script>
 					 let chart_2016 = new frappe.Chart( "#chart_2016", { // or DOM element
                             data: {
                                 labels: ["Kansas City", "Overland Park", "National"],
@@ -264,12 +275,12 @@
                                 formatTooltipY: d => d + ' %',
                             }
                         });
-					</script>
+					</script> -->
                 </div>
             </div>
         </div>
 	</div>
-<div id="my_2017">
+<div id="my_2017"  style="display: none;">
         <br><br>
         <br>
 
@@ -320,10 +331,10 @@
                         <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <div><h3>1 in 58</h3><br>In Kansas City</div>
+                        <div><h3>1.17%</h3><br>In 2017, Kansas City</div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <h3>1 in 478</h3><br>In Overland Park
+                        <h3>6.75%</h3><br>In 2016, Kansas City
                     </div>
                 </div>
             </div>
@@ -381,10 +392,10 @@
                         <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <div><h3>1 in 58</h3><br>In Kansas City</div>
+                        <div><h3>3.76%</h3><br>In 2015, Kansas City</div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <h3>1 in 478</h3><br>In Overland Park
+                        <h3>6.75%</h3><br>In 2016, Kansas City
                     </div>
                 </div>
             </div>
@@ -442,17 +453,17 @@
                         <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <div><h3>1 in 58</h3><br>In Kansas City</div>
+                        <div><h3>2.39%</h3><br>In 2014, Kansas City</div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <h3>1 in 478</h3><br>In Overland Park
+                        <h3>3.76%</h3><br>In 2015, Kansas City
                     </div>
                 </div>
             </div>
         </div>
 		<br><br><br>
 </div>
-<div id="my_2014" style="display: none;">
+<div id="my_2014">
         <br><br>
         <br>
 
@@ -503,10 +514,10 @@
                         <div><h2>CHANCES OF BECOMING A VICTIM OF A "VIOLENT" CRIME</h2></div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <div><h3>1 in 58</h3><br>In Kansas City</div>
+                        <div><h3>2.39%</h3><br>In 2014, Kansas City</div>
                     </div>
                     <div class="chances-victim-cont col-6 col-lg-3 col-md-3 text-center">
-                        <h3>1 in 478</h3><br>In Overland Park
+                        <h3>1.17%</h3><br>In 2017, Kansas City
                     </div>
                 </div>
             </div>
@@ -514,10 +525,12 @@
 		<br><br><br>
 </div>
 
-
+		<script type="text/javascript" src="app.js"></script>
 		<!-- FUNCTIONS FOR HIDING VISUALIZATIONS -->
 			<script>
+			var yearArray = ['2014 KANSAS CITY VIOLENT CRIMES', '2015 KANSAS CITY VIOLENT CRIMES', '2016 KANSAS CITY VIOLENT CRIMES', '2017 KANSAS CITY VIOLENT CRIMES'];
 			function myFunction2014() {
+				d3.select("h1").text(yearArray[0]);
 				var x = document.getElementById("myDIV2014");
 				var y = document.getElementById("myDIV2015");
 				var z = document.getElementById("myDIV2016");
@@ -541,6 +554,7 @@
 				}
 			}
 			function myFunction2015() {
+				d3.select("h1").text(yearArray[1]);
 				var x = document.getElementById("myDIV2015");
 				var y = document.getElementById("myDIV2014");
 				var z = document.getElementById("myDIV2016");
@@ -564,6 +578,7 @@
 				}
 			}
 			function myFunction2016() {
+				d3.select("h1").text(yearArray[2]);
 				var x = document.getElementById("myDIV2016");
 				var y = document.getElementById("myDIV2014");
 				var z = document.getElementById("myDIV2015");
@@ -587,6 +602,7 @@
 				}
 			}
 			function myFunction2017() {
+				d3.select("h1").text(yearArray[3]);
 				var x = document.getElementById("myDIV2017");
 				var y = document.getElementById("myDIV2014");
 				var z = document.getElementById("myDIV2016");
