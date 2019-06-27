@@ -1,0 +1,102 @@
+﻿Offense,Description,Type,Count
+101,Homicide/Non Neglige,Violent ,183
+121,Justifiable Homicide,Violent ,14
+201,Rape,Violent ,655
+210,Forcible Sodomy,Violent ,384
+220,Sexual Assault with,Violent ,4
+230,Forcible Fondling,Violent ,17
+301,Strong Arm Robbery,Violent ,1941
+302,Armed Robbery,Violent ,4158
+401,Aggravated Assault,Violent ,6958
+402,Agg Assault - Drive-,Violent ,689
+403,Agg Assault - Domest,Violent ,2999
+501,Burglary - Residence,Property,8227
+502,Burglary - Non Resid,Property,2288
+610,Stealing Pickpocket,Property,153
+620,Stealing Purse Snatc,Property,99
+630,Stealing Shoplifting,Property,5796
+640,Stealing From Auto,Property,9302
+650,Stealing Auto Parts/,Property,3988
+660,Stealing Bicycles,Property,160
+670,Stealing from Buildi,Property,4966
+680,Stealing Coin Operat,Property,40
+690,Stealing All Other,Property,4648
+702,Auto Theft,Property,9281
+799,Auto Theft Outside S,Property,891
+801,Non Aggravated Assau,Non-Violent ,6382
+802,Non Agg Assault Dome,Non-Violent ,8857
+820,Stalking,Non-Violent ,29
+831,Intimidation,Non-Violent ,1593
+840,Resisting an Officer,Non-Violent ,1853
+842,Resisting an Officer,Non-Violent ,5
+901,Arson,Property,455
+902,Arson with Fire Bomb,Property,8
+1001,Forgery,Property,400
+1002,Forged Checks,Property,425
+1050,Counterfeiting,Property,317
+1120,Fraud/Confidence Gam,Property,1659
+1122,Credit/Debit/ATM Car,Property,1141
+1170,Failure to Return,Non-Violent ,52
+1188,Wire Fraud,Property,373
+1189,Welfare Fraud,Property,4
+1197,Impersonation - NOT,Non-Violent ,83
+1198,Identity Theft,Non-Violent ,1343
+1199,Hacking/Computer Inv,Non-Violent ,40
+1201,Embezzlement,Property,527
+1352,Stolen Property OFFE,Property,660
+1401,Property Damage,Property,11951
+1546,Weapons Law Violatio,Non-Violent ,1124
+1648,Pornography,Non-Violent ,26
+1650,Promoting Prostituti,Non-Violent ,24
+1651,Prostitution/Solicit,Non-Violent ,165
+1652,Prostitution/Patroni,Non-Violent ,130
+1653,Human Trafficking/Co,Non-Violent ,6
+1701,Sex Offense -others,Violent ,107
+1702,Statutory Rape,Violent ,83
+1740,Sex Off Follow/Entic,Non-Violent ,15
+1741,Sex Off Indecent Con,Non-Violent ,82
+1742,Sex Off Misconduct,Non-Violent ,150
+1750,Sex Off Fondle - mol,Non-Violent ,399
+1760,Sex Off Incest,Non-Violent ,2
+1770,Sex Off Indecent Exp,Non-Violent ,126
+1849,Possession/Sale/Dist,Non-Violent ,4888
+1850,Possession of Drug E,Non-Violent ,1574
+2001,Family Offense,Non-Violent ,586
+2031,Family Disturbance,Non-Violent ,5
+2040,Violation Full Order,Non-Violent ,753
+2041,Violation Ex Parte O,Non-Violent ,447
+2054,Interference with Cu,Non-Violent ,135
+2100,Driving Under Influe,Non-Violent ,943
+2201,Liquor Law Violaton,Non-Violent ,318
+2402,Disorderly Conduct,Non-Violent ,1510
+2403,Drunkenness,Non-Violent ,39
+2501,Vagrancy,Non-Violent ,2
+2530,Loitering,Non-Violent ,32
+2601,Misc Violation,Non-Violent ,4104
+2602,Bomb Threat/Intimida,Non-Violent ,106
+2603,False ID,Non-Violent ,19
+2604,False Information to,Non-Violent ,301
+2655,Trespassing,Non-Violent ,3377
+2661,Kidnapping/Abduction,Non-Violent ,222
+2662,Extortion/Blackmail,Non-Violent ,18
+2663,Passing Bad Checks,Non-Violent ,13
+2664,Curfew,Non-Violent ,34
+2665,Peeping Tom,Non-Violent ,3
+2693,Hit and Run of a Per,Non-Violent ,14
+2954,Missing/Runaway Juve,Non-Violent ,7
+3010,Casualty (includes a,Non-Violent ,11
+3020,Dead Body,Non-Violent ,75
+3036,Animal Cruelty,Non-Violent ,4
+3060,Suicide By Cutting,Non-Violent ,1
+3063,Suicide By Hanging,Non-Violent ,1
+3066,Suicide By Shooting,Non-Violent ,2
+3067,Suicide By Sleeping,Non-Violent ,11
+3069,Suicide by Other Mea,Non-Violent ,2
+3070,Attempt Suicide by C,Non-Violent ,33
+3072,Attempt Suicide by G,Non-Violent ,1
+3073,Attempt Suicide by H,Non-Violent ,11
+3074,Attempt Suicide by J,Non-Violent ,4
+3075,Attempt Suicide by P,Non-Violent ,6
+3076,Attempt Suicide by S,Non-Violent ,3
+3077,Attempt Suicide by S,Non-Violent ,84
+3079,Attempt Suicide by O,Non-Violent ,28
