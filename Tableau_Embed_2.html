@@ -21,83 +21,77 @@
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-    <title>Violent Crimes - Domestic Violence</title>
+    <title>Violent Crimes</title>
 </head>
 <body>
 
-                         <!-- Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fal fa-snake"></i>SnakeBait<i class="fal fa-snake"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto navbar-border-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
-                                Graphs
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item "href="KCCrimes.html" target="_blank">Kansas City Crimes</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
-								<div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crime</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="Tableau_Embed.html" target="_blank">Heatmap of Gun Violence Occurrences</a>
-								<div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="Tableau_Embed_2.html" target="_blank">Heatmap of Domestic Violence Occurrences</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="lineregress.html" target="_blank">Linear Regression</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="kmaps.html" target="_blank">K Clusters</a>
-							</div>
-                        </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto navbar-border-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                            Graphs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item "href="AnnualIncome.html" target="_blank">Annual Income</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item "href="KCCrimes.html" target="_blank">Kansas City Crimes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ViolentCrime.html" target="_blank">Kansas City Violent Crime Report</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="PropertyCrime.html" target="_blank">Kansas City Property Crime Report</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="IncomeCrimeData.html" target="_blank">Annual Income vs Number of Crimes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Tableau_Embed.html" target="_blank">Heatmap of Firearm Usage</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Tableau_Embed_2.html" target="_blank">Heatmap of Domestic Violence Occurrences</a>
+                        </div>
+                    </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
-                                Resources
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2014/yu5f-iqbp" target="_blank">KCPD Crime Data 2014</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2015/kbzx-7ehe" target="_blank">KCPD Crime Data 2015</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2016/wbz8-pdv7" target="_blank">KCPD Crime Data 2016</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2017/98is-shjt" target="_blank">KCPD Crime Data 2017</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2018/dmjw-d28i" target="_blank">KCPD Crime Data 2018</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
-								<div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="http://www.city-data.com/crime/crime-Overland-Park-Kansas.html" target="_blank">Overland Park Crime Data</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="http://www.city-data.com/crime/crime-Kansas-City-Missouri.html" target="_blank">Kansas City Crime Data</a>
-                            </div>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2014/yu5f-iqbp" target="_blank">KCPD Crime Data 2014</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2015/kbzx-7ehe" target="_blank">KCPD Crime Data 2015</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2016/wbz8-pdv7" target="_blank">KCPD Crime Data 2016</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2017/98is-shjt" target="_blank">KCPD Crime Data 2017</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://data.kcmo.org/Crime/KCPD-Crime-Data-2018/dmjw-d28i" target="_blank">KCPD Crime Data 2018</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://datausa.io/profile/geo/kansas-city-mo/#economy" target="_blank">Income Data</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://datausa.io/api/data?measure=Household%20Income%20by%20Race,Household%20Income%20by%20Race%20Moe&Geography=16000US2938000:parents,16000US2938000,16000US2938000:similar" target="_blank">Income Data(API)</a>
+
+
+                        </div>
+                    </li>
 
 
 
-                        <li>
-                            <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a class="btn my-2 my-sm-0 btn-dark" href="https://bootcamp.ku.edu/" role="button" target="_blank" id="signIn">Sign In</a>
+                    </li>
+                </ul>
 
-                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
     <div class="row">
         <div class="container">
@@ -114,7 +108,7 @@
             <div class="small"><h1 id="content-title">Domestic Violence<hr class="style14"></h1></div>
         </div>
         <div class="section">
-                <div class='tableauPlaceholder' id='viz1561421167977' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7Y&#47;7YZRQ9RCX&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;7YZRQ9RCX' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7Y&#47;7YZRQ9RCX&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1561421167977');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
+                <div class='tableauPlaceholder' id='viz1561815854162' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3C&#47;3CR6Y4DW5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;3CR6Y4DW5' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3C&#47;3CR6Y4DW5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1561815854162');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
     </div>
     <br><br>
