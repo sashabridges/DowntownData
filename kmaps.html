@@ -23,7 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-        <title>Downtown Data Discovery</title>
+        <title>Machine Learning with Linear Regression</title>
     </head>
     <body>
 
@@ -100,93 +100,33 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Section -->
-        <section id="header">
-            <div class="jumbotron text-center" id="header">
-                <div class="display-3 text-light" id="title2">KANSAS CITY CRIME</div>
-
-            </div>
-        </section>
-
-        <!-- Images -->
-        <section id="gallery">
-            <div class="container">
-                <div class="row d-flex flex-md-row">
-                    <div class="col-lg-3 mb-3 align-self-start">
-                        <div class="card">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Income Data</b></h5>
-                                <p class="card-text">Looks at Income as a trend for the financial health of a city.</p>
-								<br>
-								<br>
-                                <a href="AnnualIncome.html" class="btn btn-outline-success btn-sm">READ MORE</a>
-                                <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                            </div> 
-                        </div>
-                    </div>
-                    
-        
-                    <div class="col-lg-3 mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1532077795300-c4b487f601f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Violent Crime Report</b></h5>
-                                <p class="card-text">Violence is a key determinant in considering livability for any city.</p>
-								<br>
-                                <a href="ViolentCrime.html" class="btn btn-outline-success btn-sm">READ MORE</a>
-                                <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                            </div> 
-                        </div> 
-                    </div>
-
-                    <div class="col-lg-3 mb-3 align-self-start">
-                        <div class="card">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1441804238730-210ce1c2cc00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Property Crime Report</b></h5>
-                                <p class="card-text">Property crimes are broken out as a general trend in crime.</p>
-								<br>
-								<br>
-                                <a href="PropertyCrime.html" class="btn btn-outline-success btn-sm">READ MORE</a>
-                                <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 mb-3 align-self-start">
-                        <div class="card">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2725&q=80" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Income vs Crime Rate</b></h5>
-                                <p class="card-text">Comparing the general trend of income to crime data to explore possible relationships.</p>
-                                <a href="IncomeCrimeData.html" class="btn btn-outline-success btn-sm">READ MORE</a>
-                                <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                            </div> 
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-
-			<div id="pie"></div>
-			<script>
-				var url = "/flask_url";
-				d3.json(url).then(function(data){
-					var layout = {
-						title: "Crime Frequency"}
-					Plotly.plot("pie", data, layout);
-				});
-			</script>
-
-            </script>
+	<div class="container">
+        <div class="center-block text-center">
+            <div class="small"><h1 id="content-title">K Means Clusters<hr class="style14"></h1></div>
         </div>
     </div>
-
-
-
+    <br>
+	<div class="container">
+		<p>Geographic clustering is a unique way to do K Mean clusters.</p>
+		<p>With several years worth of data, we could compare the offense numbers by zip code.</p>
+		<p>This led to some interesting results!</p>
+	</div>
+		<div class="container">
+		<div class="row">
+		<img src="2014_clusters.png" alt="2014">
+		<h3>2014</h3>
+		<img src="2015_clusters.png" alt="2015">
+		<h3>2015</h3>
+		</div>
+		<div class="row">
+		<img src="2016_clusters.png" alt="2016">
+		<h3>2016</h3>
+		<img src="2017_clusters.png" alt="2017">
+		<h3>2017</h3>
+		</div>
+		</div>
+		
+		
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
